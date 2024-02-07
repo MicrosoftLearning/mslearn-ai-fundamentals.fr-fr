@@ -48,8 +48,8 @@ Dans cet exercice, vous avez créé une ressource AI Speech dans Speech Studio. 
 
 Si vous n’avez pas l’intention d’effectuer plus d’exercices, supprimez les ressources dont vous n’avez plus besoin. Cela évite d’accumuler des coûts inutiles.
 
-1. Ouvrez le [Portail Azure]( https://portal.azure.com) et sélectionnez le groupe de ressources qui contient la ressource que vous avez créée.
-1. Sélectionnez la ressource et choisissez **Supprimer**, puis **Oui** pour confirmer. La ressource est alors supprimée.
+1. Ouvrez le [portail Microsoft Azure]( https://portal.azure.com) et sélectionnez le groupe de ressources qui contient la ressource que vous avez créée.
+1. Sélectionnez la ressource, puis sélectionnez **Supprimer**, puis **Oui** pour confirmer. La ressource est alors supprimée.
 
 ## En savoir plus
 

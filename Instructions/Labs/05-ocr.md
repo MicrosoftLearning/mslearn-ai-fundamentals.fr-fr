@@ -33,15 +33,15 @@ Ensuite, connectez la ressource Azure AI services que vous avez approvisionnée 
 
 1. Connectez-vous avec votre compte et vérifiez que vous utilisez le même répertoire que celui dans lequel vous avez créé votre ressource Azure AI services.
 
-1. Dans la page d’accueil Vision Studio, sélectionnez **Afficher toutes les ressources** sous le titre **Prise en main de Vision**.
+1. Sur la page d’accueil de Vision Studio, sélectionnez **Afficher toutes les ressources** sous le titre **Démarrage avec Vision**.
 
-    ![Le lien Afficher toutes les ressources est mis en surbrillance sous Prise en main de Vision dans Vision Studio.](./media/analyze-images-vision/vision-resources.png)
+    ![Dans Vision Studio, Le lien Afficher toutes les ressources est en surbrillance dans la section Démarrage avec Vision.](./media/analyze-images-vision/vision-resources.png)
 
-1. Sur la page **Sélectionner une ressource à utiliser**, placez le curseur de la souris sur la ressource que vous avez créée ci-dessus dans la liste, puis cochez la case à gauche du nom de la ressource, puis sélectionnez **Sélectionner comme ressource par défaut**.
+1. Sur la page **Sélectionner une ressource à utiliser**, placez le curseur de votre souris sur la ressource que vous avez créée ci-dessus dans la liste, puis cochez la case à gauche du nom de la ressource et sélectionnez **Sélectionner comme ressource par défaut**.
 
     > **Remarque** : Si votre ressource n’est pas répertoriée, vous devrez peut-être **Actualiser** la page.
 
-    ![La boîte de dialogue Sélectionner une ressource à utiliser s’affiche avec la ressource Cognitive Services cog-ms-learn-vision-SUFFIX mise en surbrillance et cochée. Le bouton Sélectionner comme ressource par défaut est mis en surbrillance.](./media/analyze-images-vision/default-resource.png)
+    ![La boîte de dialogue Sélectionner une ressource à utiliser s’affiche avec la ressource Cognitive Services cog-ms-learn-vision-SUFFIX mise en surbrillance et cochée. Le bouton Sélectionner comme ressource par défaut est en surbrillance.](./media/analyze-images-vision/default-resource.png)
 
 1. Fermez la page des paramètres en sélectionnant le « x » en haut à droite de l’écran.
 

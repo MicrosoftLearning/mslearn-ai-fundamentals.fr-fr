@@ -35,12 +35,12 @@ Pour implémenter la compréhension du langage naturel avec Conversational Langu
 1. Sous un nouvel onglet de navigateur, ouvrez le portail Language Studio sur [https://language.azure.com](https://language.azure.com?azure-portal=true) et connectez-vous avec le compte Microsoft associé à votre abonnement Azure.
 
 1. Si vous êtes invité à choisir une ressource de langue, sélectionnez les paramètres suivants :
-    - **Annuaire Azure** : *annuaire Azure contenant votre abonnement*.
+    - **Annuaire Azure** : *L’annuaire Azure contenant votre abonnement*.
     - **Abonnement Azure** : *Votre abonnement Azure*.
-    - **Ressource Language** : *ressource Language créée précédemment.*
+    - **Ressource Language** : *La ressource Language que vous avez créée précédemment*.
 
    Si vous n’êtes ***pas*** invité à choisir une ressource de langue, c’est peut-être parce que vous avez plusieurs ressources de langue dans votre abonnement, auquel cas :
-    1. Dans la barre en haut de la page, sélectionnez **Paramètres (&#9881;)**.
+    1. Dans la barre située en haut si la page, sélectionnez **Paramètres (&#9881;)**.
     2. Dans la page **Paramètres**, affichez l’onglet **Ressources**.
     3. Sélectionnez la ressource de langage que vous venez de créer, puis cliquez sur **Changer de ressource**.
     4. En haut de la page, sélectionnez **Language Studio** pour revenir à la page d’accueil de Language Studio.
