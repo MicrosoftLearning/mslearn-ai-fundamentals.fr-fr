@@ -29,7 +29,7 @@ Dans cet exercice, vous allez créer une ressource AI Speech, à moins que vous 
 
 1. Sélectionnez [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) pour télécharger **speech.zip**. Ouvrez le dossier . 
 
-1. Dans la page Prise en main de la reconnaissance vocale, sous *Speech*, recherchez *Reconnaissance vocale en temps réel*. Sélectionnez **Essayer la reconnaissance vocale en temps réel**.
+1. Dans la page Prise en main de la reconnaissance vocale, sous *Reconnaissance vocale*, recherchez *Reconnaissance vocale en temps réel*. Sélectionnez **Essayer la reconnaissance vocale en temps réel**.
 
     ![Bien démarrer avec Speech](media/recognize-synthesize-speech/try-out-speech-to-text.png)
 
