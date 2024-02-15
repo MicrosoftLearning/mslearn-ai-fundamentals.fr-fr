@@ -13,14 +13,14 @@ Pour tester les fonctionnalités de détection des visages du service Azure AI V
 
 Vous pouvez utiliser le service Azure AI Visage avec une ressource multiservices **Azure AI Services**. Si ce n’est déjà fait, créez une ressource **Azure AI services** dans votre abonnement Azure.
 
-1. Dans un nouvel onglet de navigateur, ouvrez le Portail Azure à l’adresse [https://portal.azure.com](https://portal.azure.com?azure-portal=true) et connectez-vous avec le compte Microsoft associé à votre abonnement Azure.
+1. Dans un autre onglet du navigateur, ouvrez le portail Azure à l’adresse [https://portal.azure.com](https://portal.azure.com?azure-portal=true) et connectez-vous avec le compte Microsoft associé à votre abonnement Azure.
 
 1. Cliquez sur le bouton **&#65291;Créer une ressource** et recherchez *Azure AI services*. Sélectionnez **créer** un plan **Azure AI services**. Vous accédez à une page pour créer une ressource Azure AI services. Configurez-la avec les paramètres suivants :
     - **Abonnement** : *votre abonnement Azure*.
     - **Groupe de ressources** : *sélectionnez ou créez un groupe de ressources portant un nom unique*.
     - **Région** : USA Est.
     - **Nom** : *entrez un nom unique.*
-    - **Niveau tarifaire** : *Standard S0.*
+    - **Niveau tarifaire** : *Standard S0.*
     - **En cochant cette case, je reconnais avoir lu et compris toutes les conditions ci-dessous** : *Sélectionné*.
 
 1. Sélectionnez **Vérifier + créer**, puis **Créer** et attendez la fin du déploiement.
@@ -33,15 +33,15 @@ Ensuite, connectez la ressource Azure AI services que vous avez approvisionnée 
 
 1. Connectez-vous avec votre compte et vérifiez que vous utilisez le même répertoire que celui dans lequel vous avez créé votre ressource Azure AI services.
 
-1. Dans la page d’accueil Vision Studio, sélectionnez **Afficher toutes les ressources** sous le titre **Prise en main de Vision**.
+1. Sur la page d’accueil de Vision Studio, sélectionnez **Afficher toutes les ressources** sous le titre **Démarrage avec Vision**.
 
-    ![Le lien Afficher toutes les ressources est mis en surbrillance sous Prise en main de Vision dans Vision Studio.](./media/analyze-images-vision/vision-resources.png)
+    ![Dans Vision Studio, Le lien Afficher toutes les ressources est en surbrillance dans la section Démarrage avec Vision.](./media/analyze-images-vision/vision-resources.png)
 
-1. Sur la page **Sélectionner une ressource à utiliser**, placez le curseur de la souris sur la ressource que vous avez créée ci-dessus dans la liste, puis cochez la case à gauche du nom de la ressource, puis sélectionnez **Sélectionner comme ressource par défaut**.
+1. Sur la page **Sélectionner une ressource à utiliser**, placez le curseur de votre souris sur la ressource que vous avez créée ci-dessus dans la liste, puis cochez la case à gauche du nom de la ressource et sélectionnez **Sélectionner comme ressource par défaut**.
 
     > **Remarque** : Si votre ressource n’est pas répertoriée, vous devrez peut-être **Actualiser** la page.
 
-    ![La boîte de dialogue Sélectionner une ressource à utiliser s’affiche avec la ressource Cognitive Services cog-ms-learn-vision-SUFFIX mise en surbrillance et cochée. Le bouton Sélectionner comme ressource par défaut est mis en surbrillance.](./media/analyze-images-vision/default-resource.png)
+    ![La boîte de dialogue Sélectionner une ressource à utiliser s’affiche avec la ressource Cognitive Services cog-ms-learn-vision-SUFFIX mise en surbrillance et cochée. Le bouton Sélectionner comme ressource par défaut est en surbrillance.](./media/analyze-images-vision/default-resource.png)
 
 1. Fermez la page des paramètres en sélectionnant le « x » en haut à droite de l’écran.
 
@@ -73,7 +73,7 @@ Ensuite, connectez la ressource Azure AI services que vous avez approvisionnée 
 
     ![Image de personnes dans un magasin avec une plante masquant un visage.](./media/create-face-solutions/store-camera-3.jpg)
 
-1. Chargez **store-camera-2.jpg** et passez en revue les informations de détection des visages retournées. Notez comment Azure AI Visage peut détecter les visages partiellement masqués. 
+1. Chargez **store-camera-3.jpg** et passez en revue les informations de détection de visages renvoyées. Notez comment Azure AI Visage n’a pas détecté le visage masqué.
 
 Dans cet exercice, vous avez découvert comment Azure AI services peuvent détecter des visages dans des images. Si vous avez du temps, n’hésitez pas à essayer les exemples d’images ou certaines de vos images.
 
