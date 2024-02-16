@@ -183,7 +183,7 @@ Une fois les documents dans le stockage, vous pouvez utiliser Recherche Azure AI
     - Exécute l’ensemble de compétences de compétences cognitives pour générer des champs enrichis supplémentaires.
     - Mappe les champs extraits à l’index.
 
-1. Dans la moitié inférieure de la page **Vue d’ensemble** de votre ressource Recherche Azure AI, sélectionnez l’onglet **Indexeurs**. Cet onglet présente l’indexeur **coffee-indexer** récemment créé. Attendez une minute, puis sélectionnez **&orarr;Actualiser** jusqu’à ce que l’**État** indique la réussite de l’opération.
+1. Revenez à votre page de ressources Recherche Azure AI. Dans le volet gauche, sous **Gestion de la recherche**, sélectionnez **Indexeurs**. Sélectionnez l’**indexeur de café** nouvellement créé. Attendez une minute, puis sélectionnez **&orarr;Actualiser** jusqu’à ce que l’**État** indique la réussite de l’opération.
 
 1. Sélectionnez le nom de l’indexeur pour afficher plus de détails.
 
@@ -197,21 +197,40 @@ Utilisez l’Explorateur de recherche pour écrire et tester les requêtes. L’
 
    ![Capture d’écran montrant comment rechercher l’Explorateur de recherche.](media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
 
-1. Notez que l’index sélectionné est l’index *coffee-index* que vous avez créé.
+2. Notez que l’index sélectionné est l’index *coffee-index* que vous avez créé. Sous l’index sélectionné, remplacez la *vue* par la **vue JSON**. 
 
     ![Capture d’écran de l’Explorateur de recherche.](media/create-cognitive-search-solution/search-explorer-query.png)
 
-    Dans le champ **Chaîne de requête**, entrez `search=*&$count=true`, puis sélectionnez **Rechercher**. La requête de recherche retourne tous les documents dans l’index de recherche, y compris le nombre de tous les documents dans le champ **@odata.count**. L’index de recherche doit retourner un document JSON contenant les résultats de votre recherche.
+Dans le champ de l’**éditeur de requête JSON**, copiez et collez : 
+```json
+{
+    "search": "*",
+    "count": true
+}
+```
+3. Sélectionnez **Rechercher**. La requête de recherche retourne tous les documents dans l’index de recherche, y compris le nombre de tous les documents dans le champ **@odata.count**. L’index de recherche doit retourner un document JSON contenant les résultats de votre recherche.
 
-    > **Remarque** Si le message **Pour effectuer une recherche dans le portail, autorisez l’origine du portail dans les paramètres de votre index CORS** s’affiche, sélectionnez **Autoriser le portail**, puis **Rechercher**.
+4. À présent, filtrons par localisation. Dans le champ de l’**éditeur de requête JSON**, copiez et collez : 
+```json
+{
+    "search": "locations:'Chicago'",
+    "count": true
+}
+```
+5. Sélectionnez **Rechercher**. La requête recherche dans tous les documents de l’index et filtre les avis sur la localisation Chicago. Vous devriez voir `3` dans le champ `@odata.count`.
 
-1. À présent, filtrons par localisation. Entrez `search=locations:'Chicago'` dans le champ **Chaîne de requête**, puis sélectionnez **Rechercher**. La requête recherche dans tous les documents de l’index et filtre les avis sur la localisation Chicago.
-
-1. À présent, filtrons par sentiment. Entrez `search=sentiment:'negative'` dans le champ **Chaîne de requête**, puis sélectionnez **Rechercher**. La requête recherche dans tous les documents de l’index et filtre les avis sur un sentiment négatif.
+6. À présent, filtrons par sentiment. Dans le champ de l’**éditeur de requête JSON**, copiez et collez : 
+```json
+{
+    "search": "sentiment:'negative'",
+    "count": true
+}
+```
+7. Sélectionnez **Rechercher**. La requête recherche dans tous les documents de l’index et filtre les avis sur un sentiment négatif. Vous devriez voir `1` dans le champ `@odata.count`.
 
    > **Remarque** Vous pouvez constater que les résultats sont triés par `@search.score`. Ce score affecté par le moteur de recherche exprime le degré de correspondance des résultats par rapport à la requête exécutée.
 
-1. Un des problèmes que nous pouvons souhaiter résoudre est pourquoi il peut y avoir certains avis. Jetons un coup d’œil aux expressions clés associées à l’avis négatif. Qu’est-ce qui selon vous pour être la cause de l’avis ?
+8. Un des problèmes que nous pouvons souhaiter résoudre est pourquoi il peut y avoir certains avis. Jetons un coup d’œil aux expressions clés associées à l’avis négatif. Qu’est-ce qui selon vous pour être la cause de l’avis ?
 
 ## Passer en revue la base de connaissances
 
@@ -219,36 +238,36 @@ Voyons la puissance de la base de connaissances en action. Quand vous avez exéc
 
 1. Dans le portail Azure, revenez à votre compte de stockage Azure.
 
-1. Dans le volet du menu de gauche, sélectionnez **Conteneurs**. Sélectionnez le conteneur **knowledge-store**.
+2. Dans le volet du menu de gauche, sélectionnez **Conteneurs**. Sélectionnez le conteneur **knowledge-store**.
 
     ![Capture d’écran du conteneur de la base de connaissances.](media/create-cognitive-search-solution/knowledge-store-blob-0.png)
 
-1. Sélectionnez un des éléments, puis cliquez sur le fichier **objectprojection.json**.
+3. Sélectionnez un des éléments, puis cliquez sur le fichier **objectprojection.json**.
 
     ![Capture d’écran du fichier objectprojection.json.](media/create-cognitive-search-solution/knowledge-store-blob-1.png)
 
-1. Sélectionnez **Modifier** pour voir le fichier JSON produit pour un des documents de votre magasin de données Azure.
+4. Sélectionnez **Modifier** pour voir le fichier JSON produit pour un des documents de votre magasin de données Azure.
 
     ![Capture d’écran montrant comment trouver le bouton Modifier.](media/create-cognitive-search-solution/knowledge-store-blob-2.png)
 
-1. Sélectionnez la barre de navigation de l’objet blob de stockage en haut à gauche de l’écran pour retourner au compte de stockage *Conteneurs*.
+5. Sélectionnez la barre de navigation de l’objet blob de stockage en haut à gauche de l’écran pour retourner au compte de stockage *Conteneurs*.
 
     ![Capture d’écran de la barre de navigation de l’objet blob de stockage.](media/create-cognitive-search-solution/knowledge-store-blob-4.png)
 
-1. Dans *Conteneurs*, sélectionnez le conteneur *coffee-skillset-image-projection*. Sélectionnez un des éléments.
+6. Dans *Conteneurs*, sélectionnez le conteneur *coffee-skillset-image-projection*. Sélectionnez un des éléments.
 
     ![Capture d’écran du conteneur d’ensemble de compétences.](media/create-cognitive-search-solution/knowledge-store-blob-5.png)
 
-1. Sélectionnez un des fichiers *.jpg*. Sélectionnez **Modifier** pour voir l’image stockée provenant du document. Notez que toutes les images des documents sont stockées de cette manière.
+7. Sélectionnez un des fichiers *.jpg*. Sélectionnez **Modifier** pour voir l’image stockée provenant du document. Notez que toutes les images des documents sont stockées de cette manière.
 
     ![Capture d’écran de l’image enregistrée.](media/create-cognitive-search-solution/knowledge-store-blob-3.png)
 
-1. Sélectionnez la barre de navigation de l’objet blob de stockage en haut à gauche de l’écran pour retourner au compte de stockage *Conteneurs*.
+8. Sélectionnez la barre de navigation de l’objet blob de stockage en haut à gauche de l’écran pour retourner au compte de stockage *Conteneurs*.
 
-1. Sélectionnez **Navigateur de stockage** dans le panneau de gauche, puis sélectionnez **Tables**. Il existe une table pour chaque entité de l’index. Sélectionnez la table *coffeeSkillsetKeyPhrases*.
+9. Sélectionnez **Navigateur de stockage** dans le panneau de gauche, puis sélectionnez **Tables**. Il existe une table pour chaque entité de l’index. Sélectionnez la table *coffeeSkillsetKeyPhrases*.
 
     Examinez les expressions que la base de connaissances a pu capturer à partir du contenu des avis. La plupart des champs sont des clés, ce qui vous permet de lier les tables comme une base de données relationnelle. Le dernier champ affiche les phrases clés qui ont été extraites par l’ensemble de compétences.
 
 ## En savoir plus
 
-Cet index de recherche simple n’est qu’une partie des fonctionnalités du service Recherche Azure AI. Pour en savoir plus sur ce que vous pouvez faire avec ce service, consultez la [page du service Recherche Azure AI](/azure/search/search-what-is-azure-search).
+Cet index de recherche simple n’est qu’une partie des fonctionnalités du service Recherche Azure AI. Pour en savoir plus sur ce que vous pouvez faire avec ce service, consultez la [page du service Recherche Azure AI](https://learn.microsoft.com/azure/search).
