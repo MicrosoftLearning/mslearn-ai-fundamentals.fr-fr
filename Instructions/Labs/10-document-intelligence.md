@@ -36,7 +36,7 @@ Laissez le Studio Intelligence documentaire ouvert.
 Vous êtes maintenant prêt à analyser un reçu pour la société de vente au détail fictive Northwind Traders.
 
 1. Sélectionnez [**https://aka.ms/mslearn-receipt**](https://aka.ms/mslearn-receipt) pour télécharger un exemple de document sur votre ordinateur. Ouvrez le dossier . 
-1. Sélectionnez **Form Recognizer Studio** pour revenir à la page **Prise en main du Studio Intelligence documentaire**, puis, sous Reçus, sélectionnez **Essayer**.
+1. Sélectionnez **Studio Intelligence documentaire** pour revenir à la page **Prise en main du Studio Intelligence documentaire**, puis sélectionnez **Essayer** sous Reçus.
 1. Dans la liste déroulante Prédéfini, vérifiez que **Reçus** est sélectionné.
 1. Sélectionnez **Parcourir les fichiers** et accédez au dossier où vous avez enregistré l’image. Sélectionnez l’image du reçu, puis **Ouvrir**. L’image apparaît sur le côté gauche de l’écran.
 
@@ -51,8 +51,8 @@ Dans cet exercice, vous avez utilisé le Studio Intelligence documentaire pour c
 
 Si vous n’avez pas l’intention d’effectuer plus d’exercices, supprimez les ressources dont vous n’avez plus besoin. Cela évite d’accumuler des coûts inutiles.
 
-1. Ouvrez le [Portail Azure]( https://portal.azure.com) et sélectionnez le groupe de ressources qui contient la ressource que vous avez créée.
-1. Sélectionnez la ressource, puis sélectionnez **Supprimer**, puis **Oui** pour confirmer. La ressource est ensuite supprimée.
+1. Ouvrez le [portail Microsoft Azure]( https://portal.azure.com) et sélectionnez le groupe de ressources qui contient la ressource que vous avez créée.
+1. Sélectionnez la ressource, puis sélectionnez **Supprimer**, puis **Oui** pour confirmer. La ressource est alors supprimée.
 
 ## En savoir plus
 

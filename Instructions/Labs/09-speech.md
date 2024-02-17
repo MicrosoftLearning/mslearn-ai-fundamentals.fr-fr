@@ -29,7 +29,7 @@ Dans cet exercice, vous allez créer une ressource AI Speech, à moins que vous 
 
 1. Sélectionnez [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) pour télécharger **speech.zip**. Ouvrez le dossier . 
 
-1. Dans la page Prise en main de la reconnaissance vocale, sous *Speech*, recherchez *Reconnaissance vocale en temps réel*. Sélectionnez **Essayer la reconnaissance vocale en temps réel**.
+1. Dans la page Prise en main de la reconnaissance vocale, sous *Reconnaissance vocale*, recherchez *Reconnaissance vocale en temps réel*. Sélectionnez **Essayer la reconnaissance vocale en temps réel**.
 
     ![Bien démarrer avec Speech](media/recognize-synthesize-speech/try-out-speech-to-text.png)
 
@@ -48,8 +48,8 @@ Dans cet exercice, vous avez créé une ressource AI Speech dans Speech Studio. 
 
 Si vous n’avez pas l’intention d’effectuer plus d’exercices, supprimez les ressources dont vous n’avez plus besoin. Cela évite d’accumuler des coûts inutiles.
 
-1. Ouvrez le [Portail Azure]( https://portal.azure.com) et sélectionnez le groupe de ressources qui contient la ressource que vous avez créée.
-1. Sélectionnez la ressource et choisissez **Supprimer**, puis **Oui** pour confirmer. La ressource est alors supprimée.
+1. Ouvrez le [portail Microsoft Azure]( https://portal.azure.com) et sélectionnez le groupe de ressources qui contient la ressource que vous avez créée.
+1. Sélectionnez la ressource, puis sélectionnez **Supprimer**, puis **Oui** pour confirmer. La ressource est alors supprimée.
 
 ## En savoir plus
 
