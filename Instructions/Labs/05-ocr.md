@@ -61,7 +61,7 @@ Ensuite, connectez la ressource Azure AI services que vous avez approvisionnée 
     - Dans **Attributs détectés**, tout texte trouvé dans l’image est organisé en une structure hiérarchique de régions, de lignes et de mots.
     - Sur l’image, l’emplacement du texte est indiqué par un cadre englobant, comme illustré ici :
 
-    ![Image du texte dans l’image détourée](media/read-text-computer-vision/text-bounding-boxes.png)
+    ![Image du texte dans l’image décrite.](media/read-text-computer-vision/advert-bounding-boxes.jpg)
 
 1. Vous pouvez maintenant essayer une autre image. Sélectionnez **Rechercher un fichier** et accédez au dossier dans lequel vous avez enregistré les fichiers depuis GitHub. Sélectionnez **letter.jpg**.
 
