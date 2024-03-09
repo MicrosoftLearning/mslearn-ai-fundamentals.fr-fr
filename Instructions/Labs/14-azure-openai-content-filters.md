@@ -26,9 +26,22 @@ Avant de pouvoir utiliser des modèles Azure OpenAI, vous devez provisionner une
 2. Créez une ressource **Azure OpenAI** avec les paramètres suivants :
     - **Abonnement** : *Un abonnement Azure approuvé pour l’accès au service Azure OpenAI.*
     - **Groupe de ressources** : *Choisissez un groupe de ressources existant ou créez-en un avec le nom de votre choix.*
-    - **Région** : *choisissez une région disponible*.
-    - **Nom** : *Un nom unique de votre choix.*
+    - **Région** : *Choisir de manière **aléatoire** une région parmi les suivantes*\*
+        - Australie Est
+        - Est du Canada
+        - USA Est
+        - USA Est 2
+        - France Centre
+        - Japon Est
+        - Centre-Nord des États-Unis
+        - Suède Centre
+        - Suisse Nord
+        - Sud du Royaume-Uni
+    - **Nom** : *un nom unique de votre choix*
     - **Niveau tarifaire** : Standard S0
+
+    > \* Les ressources Azure OpenAI sont limitées par des quotas régionaux. Les régions répertoriées incluent le quota par défaut pour les types de modèle utilisés dans cet exercice. Le choix aléatoire d’une région réduit le risque d’atteindre sa limite de quota dans les scénarios où vous partagez un abonnement avec d’autres utilisateurs. Si une limite de quota est atteinte plus tard dans l’exercice, vous devrez peut-être créer une autre ressource dans une autre région.
+
 3. Attendez la fin du déploiement. Accédez ensuite à la ressource Azure OpenAI déployée dans le portail Azure.
 
 ## Déployer un modèle
@@ -39,7 +52,14 @@ Vous êtes maintenant prêt à déployer un modèle à utiliser via **Azure Open
 2. Dans Azure OpenAI Studio, créez un déploiement avec les paramètres suivants :
     - **Modèle** : gpt-35-turbo
     - **Version du modèle** : mise à jour automatique avec la valeur par défaut
-    - **Nom du déploiement** : 35turbo
+    - **Nom du déploiement** : *nom unique de votre choix*
+    - **Options avancées**
+        - **Filtre de contenu** : valeur par défaut
+        - **Type de déploiement** : Standard
+        - **Limite de débit de jetons par minute** : 5 000\*
+        - **Activer le quota dynamique** :activé
+
+    > \* Une limite de débit de 5 000 jetons par minute est plus que suffisante pour effectuer cet exercice tout permettant à d’autres personnes d’utiliser le même abonnement.
 
 > **Remarque** : Chaque modèle Azure OpenAI est optimisé pour un équilibre différent entre les fonctionnalités et les performances. Dans cet exercice, nous utiliserons le modèle **GPT 3.5 Turbo**, qui est très performant pour la génération de langage naturel et les scénarios de conversation.
 

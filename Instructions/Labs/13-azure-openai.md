@@ -26,9 +26,12 @@ Avant de pouvoir utiliser des modèles Azure OpenAI, vous devez provisionner une
 2. Créez une ressource **Azure OpenAI** avec les paramètres suivants :
     - **Abonnement** : *Un abonnement Azure approuvé pour l’accès au service Azure OpenAI.*
     - **Groupe de ressources** : *Choisissez un groupe de ressources existant ou créez-en un avec le nom de votre choix.*
-    - **Région** : *choisissez une région disponible*.
-    - **Nom** : *Un nom unique de votre choix.*
+    - **Région** : USA Est\*
+    - **Nom** : *un nom unique de votre choix*
     - **Niveau tarifaire** : Standard S0
+
+    > \* Différentes régions disposent d’une disponibilité et d’un quota différents pour les modèles. Dans cet exercice, vous allez utiliser un modèle GPT-35-Turbo pour la génération de texte et un modèle DALL-E pour la génération d’images, qui sont tous deux supportés dans la région USA Est. 
+
 3. Attendez la fin du déploiement. Accédez ensuite à la ressource Azure OpenAI déployée dans le portail Azure.
 
 ## Explorer Azure OpenAI Studio
@@ -58,6 +61,13 @@ Pour expérimenter avec la génération de langage naturel, vous devez d’abord
     - **Modèle** : gpt-35-turbo
     - **Version du modèle** : mise à jour automatique avec la valeur par défaut
     - **Nom du déploiement** : *Un nom unique pour votre modèle de déploiement*
+    - **Options avancées**
+        - **Filtre de contenu** : valeur par défaut
+        - **Type de déploiement** : Standard
+        - **Limite de débit de jetons par minute** : 5 000\*
+        - **Activer le quota dynamique** :activé
+
+    > \* Une limite de débit de 5 000 jetons par minute est plus que suffisante pour effectuer cet exercice tout permettant à d’autres personnes d’utiliser le même abonnement.
 
 ## Utiliser le terrain de jeu *Conversation* pour travailler avec le modèle
 
