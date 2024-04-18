@@ -30,7 +30,7 @@ Avant de pouvoir utiliser des modèles Azure OpenAI, vous devez provisionner une
     - **Nom** : *un nom unique de votre choix*
     - **Niveau tarifaire** : Standard S0
 
-    > \* Différentes régions disposent d’une disponibilité et d’un quota différents pour les modèles. Dans cet exercice, vous allez utiliser un modèle GPT-35-Turbo pour la génération de texte et un modèle DALL-E pour la génération d’images, qui sont tous deux supportés dans la région USA Est. 
+    > \* Différentes régions disposent d’une disponibilité et d’un quota différents pour les modèles. Dans cet exercice, vous allez utiliser un modèle GPT-35-Turbo pour la génération de texte et un modèle DALL-E pour la génération d’images, qui sont tous deux supportés dans la région USA Est. 
 
 3. Attendez la fin du déploiement. Accédez ensuite à la ressource Azure OpenAI déployée dans le portail Azure.
 
