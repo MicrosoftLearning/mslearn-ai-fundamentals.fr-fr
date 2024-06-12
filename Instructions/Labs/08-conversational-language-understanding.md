@@ -20,7 +20,7 @@ Vous pouvez utiliser de nombreuses fonctionnalités d’Azure AI Language avec u
 1. Dans la page **Créer un langage**, configurez-la avec les paramètres suivants :
     - **Abonnement** : *votre abonnement Azure*.
     - **Groupe de ressources** : *sélectionnez ou créez un groupe de ressources portant un nom unique*.
-    - **Région** : USA Est.
+    - **Région** : *Sélectionnez la région géographique la plus proche. Si vous êtes dans l’est des États-Unis, utilisez « USA Est 2 »*.
     - **Nom** : *entrez un nom unique.*
     - **Niveau tarifaire** : *Gratuit F0 ou S si Gratuit F0 n’est pas disponible*.
     - **En cochant cette case, je reconnais avoir lu et compris toutes les conditions ci-dessous** : *case cochée*.
