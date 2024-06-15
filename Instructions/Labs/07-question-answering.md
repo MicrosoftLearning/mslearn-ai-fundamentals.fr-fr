@@ -31,7 +31,7 @@ Pour utiliser la réponse aux questions, vous avez besoin d’une ressource **La
         - **Abonnement** : *votre abonnement Azure*.
         - **Groupe de ressources** : *sélectionnez un groupe de ressources ou créez-en un nouveau*.
     - **Détails de l’instance**
-        - **Région** : *Sélectionner une région*      
+        - **Région** : *sélectionnez une région. Si vous êtes dans l’est des États-Unis, utilisez « USA Est 2 »*.      
         - **Nom** : *nom unique de votre ressource Language*.
         - **Niveau tarifaire** : S (1 000 appels par minute)
     - **Réponses à des questions personnalisées**

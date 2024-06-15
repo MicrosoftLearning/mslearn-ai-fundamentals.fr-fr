@@ -23,7 +23,7 @@ Vous pouvez utiliser Azure AI Intelligence documentaire en créant une ressource
     - **Abonnement** : *votre abonnement Azure*.
     - **Groupe de ressources** : *sélectionnez ou créez un groupe de ressources portant un nom unique*.
     - **Nouveau nom de la ressource** : *Saisissez un nom unique*.
-    - **Emplacement** : *Sélectionnez une région*.
+    - **Emplacement** : *sélectionnez une région. Si vous êtes dans l’est des États-Unis, utilisez « USA Est 2 »*.
     - **Niveau tarifaire** : *Gratuit FO (si disponible, sinon sélectionnez Standard SO)*.
 1. Sélectionnez **Continuer**, puis **Terminer**. Attendez que la ressource soit déployée.
 
@@ -40,7 +40,7 @@ Vous êtes maintenant prêt à analyser un reçu pour la société de vente au d
 1. Dans la liste déroulante Prédéfini, vérifiez que **Reçus** est sélectionné.
 1. Sélectionnez **Parcourir les fichiers** et accédez au dossier où vous avez enregistré l’image. Sélectionnez l’image du reçu, puis **Ouvrir**. L’image apparaît sur le côté gauche de l’écran.
 
-    ![Reçu Northwind.](media/document-intelligence/northwind-receipt.jpg)
+    ![Capture d’écran d’un reçu de Northwind.](media/document-intelligence/receipt.jpg)
 
 1. Sur la droite, sélectionnez **Exécuter l’analyse**.
 1. Une fois l’analyse exécutée, les résultats sont retournés. Notez que le service a reconnu des champs de données spécifiques tels que le nom du prestataire, l’adresse, le numéro de téléphone et la date et l’heure de la transaction, ainsi que les éléments de ligne, les sous-totaux, les taxes et les montants totaux. À côté de chaque champ figure un pourcentage de probabilité que le champ soit correct.

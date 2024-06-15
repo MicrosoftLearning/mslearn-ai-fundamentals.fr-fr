@@ -15,19 +15,19 @@ Azure AI Language Service comprend des fonctionnalités d’analyse de texte et 
 
 ## Créer une ressource *Langage*
 
-Vous pouvez utiliser de nombreuses fonctionnalités Azure AI Language avec une ressource **Langage** ou **Azure AI services**. Dans certains cas, seule une ressource linguistique peut être utilisée. Pour l’exercice ci-dessous, nous allons utiliser une ressource **Langage**. Si ce n’est déjà fait, créez une ressource **Langage** dans votre abonnement Azure.
+Vous pouvez utiliser de nombreuses fonctionnalités d’Azure AI Language avec une ressource **Language** ou **Azure AI services**. Dans certains cas, seule une ressource Language peut être utilisée. Pour l’exercice ci-dessous, nous allons utiliser une ressource **Language**. Si ce n’est déjà fait, créez une ressource **Langage** dans votre abonnement Azure.
 
-1. Dans un nouvel onglet de navigateur, ouvrez le Portail Azure à l’adresse [https://portal.azure.com](https://portal.azure.com?azure-portal=true) et connectez-vous avec le compte Microsoft associé à votre abonnement Azure.
+1. Sous un nouvel onglet de navigateur, ouvrez le Portail Azure à l’adresse [https://portal.azure.com](https://portal.azure.com?azure-portal=true) et connectez-vous avec le compte Microsoft associé à votre abonnement Azure.
 
-1. Cliquez sur le bouton  **&#65291;Créer une ressource** et recherchez *Language service*. Sélectionnez **créer** un plan du **service Language**. Vous serez redirigé vers une page pour **sélectionner des fonctionnalités supplémentaires**. Conservez la sélection par défaut, puis cliquez sur **Continuer pour créer votre ressource**. 
+1. Cliquez sur le bouton **&#65291;Créer une ressource** et recherchez le *service Language*. Sélectionnez **créer** un plan du **service Language**. Vous serez redirigé vers une page pour **sélectionner des fonctionnalités supplémentaires**. Conservez la sélection par défaut, puis cliquez sur **Continuer pour créer votre ressource**. 
 
-1. Dans la page **Créer un langage**, configurez-la avec les paramètres suivants :
+1. Dans la page **Créer un langage**, configurez-la avec les paramètres suivants :
     - **Abonnement** : *votre abonnement Azure*.
     - **Groupe de ressources** : *sélectionnez ou créez un groupe de ressources portant un nom unique*.
-    - **Région** : USA Est.
+    - **Région** : *Sélectionnez la région géographique la plus proche. Si vous êtes dans l’est des États-Unis, utilisez « USA Est 2 »*.
     - **Nom** : *entrez un nom unique.*
-    - **Niveau tarifaire** : *Gratuit F0 ou S si gratuit F0 n’est pas disponible*
-    - **En cochant cette case, je reconnais avoir lu et compris toutes les conditions ci-dessous** : *Sélectionné*.
+    - **Niveau tarifaire** : *Gratuit F0 ou S si Gratuit F0 n’est pas disponible*.
+    - **En cochant cette case, je reconnais avoir lu et compris toutes les conditions ci-dessous** : *case cochée*.
 
 1. Sélectionnez **Vérifier + créer**, puis **Créer** et attendez la fin du déploiement.
 
@@ -35,7 +35,7 @@ Vous pouvez utiliser de nombreuses fonctionnalités Azure AI Language avec une r
 
 1. Dans un autre onglet de navigateur, ouvrez **Language Studio** à l’adresse [https://language.cognitive.azure.com](https://language.cognitive.azure.com?azure-portal=true) et connectez-vous.
 
-1. Lorsque vous êtes invité à **sélectionner une ressource Azure**, effectuez les configurations suivantes :
+1. Lorsque vous y êtes invité à **sélectionner une ressource Azure**, effectuez les configurations suivantes :
     - **Répertoire Azure** : *Répertoire par défaut, répertoire que vous utilisez*
     - **Abonnement Azure** : *Sélectionnez l’abonnement que vous utilisez*
     - **Type de ressource** : Language.
@@ -43,7 +43,7 @@ Vous pouvez utiliser de nombreuses fonctionnalités Azure AI Language avec une r
 
 Ensuite, sélectionnez **Terminé**.
 
-> **Important** : Depuis juillet 2023, les services Azure AI englobent l'ensemble de ce qui était auparavant connu sous le nom de Cognitive Services et Azure Applied AI Services. Certaines interfaces utilisateur mettent toujours à jour leur référence de `Cognitive Services` à partir de `Azure AI services`. Les deux noms font référence au même type de ressource.
+> **Important** : À partir de juillet 2023, les services Azure AI englobent l'ensemble de ce qui était auparavant connu sous le nom de Cognitive Services et Azure Applied AI Services. Certaines interfaces utilisateur mettent toujours à jour leur référence de `Cognitive Services` à partir de `Azure AI services`. Les deux noms font référence au même type de ressource.
 
 > **Remarque** : Si vous n’êtes ***pas*** invité à choisir une ressource Language, cela peut être dû au fait que vous disposez de plusieurs ressources Language dans votre abonnement. Dans ce cas :
 > 1. Dans la barre en haut de la page, sélectionnez **Paramètres (&#9881;)**. 
@@ -95,9 +95,9 @@ Sélectionnez à nouveau **phrase 1** pour fermer.
 
     >Very noisy and rooms are tiny The Lombard Hotel, San Francisco, USA 9/5/2018 Hotel is located on Lombard street which is a very busy SIX lane street directly off the Golden Gate Bridge. Traffic from early morning until late at night especially on weekends. Noise would not be so bad if rooms were better insulated but they are not. Had to put cotton balls in my ears to be able to sleep--was too tired to enjoy the city the next day. Rooms are TINY. I picked the room because it had two queen size beds--but the room barely had space to fit them. With family of four in the room it was tight. With all that said, rooms are clean and they've made an effort to update them. The hotel is in Marina district with lots of good places to eat, within walking distance to Presidio. May be good hotel for young stay-up-late adults on a budget
 
-1. Sélectionnez **Exécuter** et passez en revue le sentiment avec le niveau de confiance. Examinez le texte et comparez-le à l’analyse des sentiments renvoyée par le service.
+1. Sélectionnez **Exécuter** et passer en revue le sentiment avec le niveau de confiance. Examinez le texte et comparez-le à l’analyse des sentiments renvoyée par le service.
 
-Dans cet exercice, vous avez utilisé Language Studio pour créer une nouvelle ressource linguistique ou utiliser une ressource linguistique existante. Vous avez activé la ressource dans Paramètres avant d’essayer le service d’exploration de sentiments et d’avis. Vous avez ensuite testé le service avec trois morceaux de texte.
+Dans cet exercice, vous avez utilisé le Language Studio pour créer une nouvelle ressource linguistique ou utiliser une ressource linguistique existante. Vous avez activé la ressource dans Paramètres avant d’essayer le service d’exploration de sentiments et d’avis. Vous avez ensuite testé le service avec trois morceaux de texte.
 
 ## Nettoyage
 
