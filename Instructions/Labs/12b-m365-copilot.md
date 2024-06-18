@@ -40,7 +40,7 @@ Pour démarrer votre exploration de l’IA générative, vous allez utiliser Cop
     How do I setup a new business in New York?
     ```
 
-1. Passez en revue la réponse et posez des questions supplémentaires si nécessaire. Quand la réponse vous convient, utilisez l’icône **Copier** (&#128461;) située sous la réponse pour la copier dans le Presse-papiers. Collez-la dans le document Word, sélectionnez tout le texte, puis sélectionnez l’icône Copilot pour visualiser le texte sous forme de tableau.
+1. Passez en revue la réponse et posez des questions supplémentaires si nécessaire. Quand la réponse vous convient, utilisez l’icône **Copier** (&#128461;) située sous la réponse pour la copier dans le Presse-papiers. Collez-la dans le document Word, sélectionnez tout le texte, puis sélectionnez l’icône Copilot (en bas du tex sélectionné) pour visualiser le texte sous forme de tableau.
 
     ![Capture d’écran montrant comment visualiser du texte sous forme de tableau dans Copilot.](./media/generative-ai/copilot-rewrite-as-table.png)
 
@@ -77,42 +77,34 @@ Après ces quelques recherches initiales, demandons à Copilot de vous aider à 
 
 1. Si les projections financières dans le plan d’entreprise ne sont pas présentées sous forme de tableau, sélectionnez-les et utilisez Copilot pour visualiser les projections sous forme de tableau.
 1. Sélectionnez le tableau des projections financières et copiez-le dans le Presse-papiers.
-1. Enregistrez le document Word.
+1. Enregistrez le document Word, puis fermez-le.
 
 ## Visualiser les projections financières dans Copilot pour Excel
 
 Plan d’entreprise en main, nous allons prendre une partie de ces données sur les projections financières et demander à Copilot dans Excel de créer une visualisation de ces données pour que nous puissions l’inclure dans des e-mails ou des présentations à des investisseurs.
 
-1. Sur votre PC où les applications Microsoft 365 sont installées, ouvrez **Excel** et créez un classeur vide. Enregistrez immédiatement le classeur sous le nom **Financial Projections.xlsx** sur OneDrive ; sinon, Copilot ne fonctionnera pas.
+1. Ouvrez **Excel** et créez un classeur vide. Enregistrez immédiatement le classeur sous le nom **Financial Projections.xlsx** sur OneDrive, autrement Copilot ne fonctionnera pas.
 1. Collez le tableau de projection des ventes de **Business Idea.docx** dans la feuille de calcul Excel et **mettez-le sous forme de tableau**. Pour ce faire :
     1. Sélectionnez une **cellule** dans vos données.
     1. Sélectionnez **Accueil**, puis choisissez **Mettre sous forme de tableau** sous Styles. 
     1. Choisissez un style pour votre tableau.
     1. Dans la boîte de dialogue **Créer un tableau**, confirmez ou définissez votre plage de cellules.
     1. Indiquez si votre tableau comporte des en-têtes, puis sélectionnez **OK**.
-1. Une fois vos projections de ventes mises sous forme de tableau, ouvrez le volet Copilot à partir du ruban Excel et entrez le prompt suivant :
+1. Une fois vos projections de ventes mises sous forme de tableau, ouvrez le volet Copilot à partir de l’onglet **Accueil** du ruban Excel et entrez le prompt suivant :
 
     ```
     Suggest ways to visualize these financial projections.
     ```
     
-1. Copilot doit vous suggérer 1 ou 2 façons de visualiser vos données et vous proposer d’ajouter un graphique croisé dynamique à une nouvelle feuille.
+1. Copilot doit vous suggérer une façon de visualiser vos données et vous proposer d’ajouter un graphique croisé dynamique à une nouvelle feuille.
 
     ![Capture d’écran de Copilot dans Excel créant une visualisation des projections financières.](./media/generative-ai/copilot-excel-visualize-projections.png)
-
-1. Toutefois, vous souhaitez peut-être voir davantage de données dans le graphique pour indiquer les changements d’une année sur l’autre. Dans ce cas, entrez le prompt suivant pour ajouter plus de données :
-
-    ```
-    Visualize these financial projections in a line chart to show year-over-year revenue and profits.
-    ```
-
-    ![Capture d’écran de Copilot dans Excel créant une visualisation des projections financières.](./media/generative-ai/copilot-excel-visualize-more.png)
 
 1. Ajoutez le graphique croisé dynamique à une nouvelle feuille et ouvrez-le. Sélectionnez le graphique, puis **Créer** pour appliquer des styles, modifier le type de graphique et effectuer d’autres actions. À la fin, vous devriez avoir quelque chose qui ressemble à ceci :
 
     ![Capture d’écran de Copilot dans Excel ajoutant un PivotChart.](./media/generative-ai/copilot-excel-chart-design.png)
 
-1. Enregistrez le fichier dans OneDrive et fermez Excel.
+1. Enregistrez le classeur et fermez Excel.
 
 Vous venez d’utiliser des données créées à partir de Copilot dans Word pour les visualiser dans Excel. Dans l’exercice suivant, vous allez utiliser Copilot dans Outlook pour composer et envoyer des e-mails sur le travail que vous avez effectué.
 
@@ -120,14 +112,20 @@ Vous venez d’utiliser des données créées à partir de Copilot dans Word pou
 
 Vous avez créé des documentations et ressources d’accompagnement pour vous aider à démarrer votre entreprise. Il est temps de prendre contact avec un investisseur pour obtenir un capital de démarrage.
 
-1. Sur votre PC où les applications Microsoft 365 sont installées, ouvrez **Outlook**. Si vous n’avez pas configuré Outlook avec votre compte Microsoft 365, consultez [Configurer et utiliser Outlook – Support Microsoft](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa).
-1. Activez l’expérience **Nouvel Outlook**. Pour obtenir les dernières fonctionnalités de Copilot dans Outlook, vous devez utiliser l’expérience « Nouvel Outlook ». Pour savoir la version que vous utilisez, consultez [Identifier votre version d’Outlook – Support Microsoft](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c).
+1. Ouvrez **Outlook**. Si vous n’avez pas configuré Outlook avec votre compte Microsoft 365, faites-le.
+
+    > **Conseil** : Consultez [Configurer et utiliser Outlook – Support Microsoft](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa) pour obtenir de l’aide avec cette procédure.
+
+1. Dans la barre d’outils, basculez vers la **nouvelle expérience Outlook** si elle n’est pas déjà active.
+
+    > **Remarque** : Pour obtenir les dernières fonctionnalités de Copilot dans Outlook, vous devez utiliser l’expérience « Nouvel Outlook ». Pour savoir la version que vous utilisez, consultez [Identifier votre version d’Outlook – Support Microsoft](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c).
+
 1. Créez un e-mail et entrez votre propre adresse e-mail dans la zone **À**.
 1. Vous pouvez commencer à rédiger votre e-mail à partir du volet Copilot ou directement à partir du corps de l’e-mail :
 
     ![Capture d’écran d’Outlook et des options permettant de rédiger un e-mail avec Copilot.](./media/generative-ai/copilot-draft-email-outlook.png)
     
-1. Entrez le prompt suivant et définissez le ton sur « Formel » et la longueur sur « Moyenne » :
+1. Entrez le prompt suivant et ajustez les options afin de définir le ton sur « Formel » et la longueur sur « Moyenne » :
 
     ```
     Request a meeting with an investment bank to discuss funding for a commercial cleaning business.
@@ -160,11 +158,7 @@ Avec l’aide de Copilot, vous avez créé un brouillon de plan d’entreprise p
 
     ![Capture d’écran de la présentation PowerPoint créée par Copilot à partir d’un document Word.](./media/generative-ai/copilot-powerpoint-create-image.png)
 
-1. Sélectionnez l’avant-dernière diapositive de la présentation. Ensuite, dans le volet Copilot, demandez à Copilot d’ajouter une nouvelle diapositive à l’aide de ce prompt :
-
-    ```
-    Add a slide that describes the benefits of an eco-friendly approach to cleaning. 
-    ```
+1. Sélectionnez l’avant-dernière diapositive de la présentation. Ensuite, dans le volet Copilot, utilisez le prompt **Ajouter une diapositive à propos de...** pour créer une diapositive à propos de `the benefits of an eco-friendly approach to cleaning.`
 
     ![Capture d’écran de la création d’une diapositive dans une présentation PowerPoint.](./media/generative-ai/copilot-powerpoint-add-new-slide.png)
 
