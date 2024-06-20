@@ -124,7 +124,7 @@ Une fois les documents dans le stockage, vous pouvez utiliser Recherche Azure AI
 
 1. Sélectionnez **Suivant : Ajouter des compétences cognitives (facultatif)**.
 
-1. Dans la section **Attacher Cognitive Services**, sélectionnez votre ressource Azure AI services.  
+1. Dans la section **Attacher AI Services**, sélectionnez votre ressource Azure AI services.  
 
 1. Dans la section **Ajouter des enrichissements** :
     - Remplacez le **Nom de l’ensemble de compétences** par **coffee-skillset**.
@@ -152,11 +152,12 @@ Une fois les documents dans le stockage, vous pouvez utiliser Recherche Azure AI
     - Détails d’image
     - Références d’image
 
-    > **Remarque** Si un message d’avertissement demandant une **chaîne de connexion de compte de stockage** s’affiche.
+    > **Remarque** Un avertissement vous demandant une **Chaîne de connexion de compte de stockage** s’affiche.
     >
     > ![Capture d’écran montrant l’avertissement de l’écran de connexion au compte de stockage avec l’option « Choisir une connexion existante » sélectionnée.](media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)
     >
-    > 1. Sélectionnez **Choisir une connexion existante**. Choisissez le compte de stockage que vous avez préalablement créé.
+
+1. Sélectionnez **Choisir une connexion existante**. Choisissez le compte de stockage que vous avez préalablement créé.
     > 1. Cliquez sur **+ Conteneur** pour créer un conteneur appelé **knowledge-store** avec un niveau de confidentialité **Privé**, puis sélectionnez **Créer**.
     > 1. Sélectionnez ensuite le conteneur **knowledge-store** et cliquez sur **Sélectionner** en bas de l’écran.
 
@@ -166,7 +167,7 @@ Une fois les documents dans le stockage, vous pouvez utiliser Recherche Azure AI
 
 1. Assurez-vous que la **Clé** est définie sur **metadata_storage_path**. Laissez **Nom du suggesteur** vide et **Mode de recherche** sur sa valeur pré-remplie.
 
-1. Passez en revue les paramètres par défaut des champs de l’index. Sélectionnez **filtrable** pour tous les champs qui sont déjà sélectionnés par défaut.
+1. Passez en revue les paramètres par défaut des champs de l’index. Sélectionnez **filtrable** pour tous les champs qui sont déjà sélectionnés par défaut. Les noms de champs devant être marqués d’un indicateur *filtrable* comprennent : le contenu, les emplacements, les phrases clés, le sentiment, merged_content, le texte, layoutText, imageTags, imageCaption.
 
     ![Capture d’écran montrant le volet Personnaliser l’index avec le nom d’index entré et l’option « Filtrable » sélectionnée pour un champ d’index par défaut.](media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)
 
@@ -238,11 +239,11 @@ Voyons la puissance de la base de connaissances en action. Quand vous avez exéc
 
 1. Dans le portail Azure, revenez à votre compte de stockage Azure.
 
-2. Dans le volet du menu de gauche, sélectionnez **Conteneurs**. Sélectionnez le conteneur **knowledge-store**.
+2. Dans le volet du menu de gauche, sélectionnez **Conteneurs**. Sélectionnez le conteneur **knowledge-store**. 
 
     ![Capture d’écran du conteneur de la base de connaissances.](media/create-cognitive-search-solution/knowledge-store-blob-0.png)
 
-3. Sélectionnez un des éléments, puis cliquez sur le fichier **objectprojection.json**.
+3. Vous verrez une liste de dossiers. Il existe un dossier pour toutes les métadonnées de chaque document d’évaluation. **Sélectionnez l’un des dossiers**. Dans le dossier, cliquez sur le fichier **objectprojection.json**.
 
     ![Capture d’écran du fichier objectprojection.json.](media/create-cognitive-search-solution/knowledge-store-blob-1.png)
 
