@@ -9,6 +9,8 @@ Dans cet exercice, vous allez utiliser la fonctionnalité Machine Learning autom
 
 Cet exercice devrait prendre environ **30** minutes.
 
+>**Important** à ce stade, il est possible de créer et de déployer un modèle en tant que service web dans Azure Machine Learning Studio, mais pas de le tester dans Studio. Par conséquent, toute la dernière section des étapes avant le nettoyage est possible. Nous allons nous mettre à jour à mesure que cela change.
+
 ## Création d’un espace de travail Microsoft Azure Machine Learning
 
 Pour utiliser Azure Machine Learning, vous devez approvisionner un espace de travail Azure Machine Learning dans votre abonnement Azure. Vous allez ensuite pouvoir utiliser Azure Machine Learning studio pour utiliser les ressources de votre espace de travail.
@@ -140,6 +142,8 @@ Une fois le travail de Machine Learning automatisé terminé, vous pouvez évalu
 1. Attendez que l’**état du déploiement** passe à *Réussi*. Cette opération peut prendre 5 à 10 minutes.
 
 ## Tester le service déployé
+
+>**Important** Azure Machine Learning Studio ne prend pas en charge le type de création de jeu de données nécessaire pour utiliser le test de déploiement. Nous vous tiendrons au courant dès qu'une solution sera trouvée. 
 
 Vous pouvez maintenant tester votre service déployé.
 

@@ -18,7 +18,7 @@ Vous pouvez utiliser les fonctionnalités d’analyse d’images d’Azure AI Vi
 1. Cliquez sur le bouton **&#65291;Créer une ressource** et recherchez *Azure AI services*. Sélectionnez **créer** un plan **Azure AI services**. Vous accédez à une page pour créer une ressource Azure AI services. Configurez-la avec les paramètres suivants :
     - **Abonnement** : *votre abonnement Azure*.
     - **Groupe de ressources** : *sélectionnez ou créez un groupe de ressources portant un nom unique*.
-    - **Région** : USA Est.
+    - **Région** : *Sélectionnez la région géographique la plus proche. Si vous êtes dans l’est des États-Unis, utilisez « USA Est 2 »*.
     - **Nom** : *entrez un nom unique.*
     - **Niveau tarifaire** : *Standard S0.*
     - **En cochant cette case, je reconnais avoir lu et compris toutes les conditions ci-dessous** : *Sélectionné*.

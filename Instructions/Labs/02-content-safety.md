@@ -29,28 +29,56 @@ Avant d’utiliser le studio, vous devez associer une ressource Azure AI servi
 
 ![Capture d’écran de l’icône des paramètres en haut à droite de l’écran, à côté des icônes de cloche, du point d’interrogation et du sourire.](./media/content-safety/settings-toggle.png)
 
-1. Dans la page **Paramètres**, vous verrez un onglet *Répertoire* et un onglet *Ressource*. Sous l’onglet *Ressource*, sélectionnez **Créer une ressource**. Cela vous amène à la page pour créer une ressource dans le Portail Azure.
+2. Dans la page **Paramètres**, vous verrez un onglet *Répertoire* et un onglet *Ressource*. Sous l’onglet *Ressource*, sélectionnez **Créer une ressource**. Cela vous amène à la page pour créer une ressource dans le Portail Azure.
 
 > **Remarque** L’onglet *Répertoire* permet aux utilisateurs de sélectionner différents répertoires à partir desquels créer des ressources. Vous n’avez pas besoin de modifier ses paramètres, sauf si vous souhaitez utiliser un autre répertoire. 
 
 ![Capture d’écran montrant où sélectionner « Créer une ressource » dans la page des paramètres de Content Safety Studio.](./media/content-safety/create-new-resource-from-studio.png)
 
-1. Dans la page *Créer une sécurité du contenu* dans le [Portail Azure](https://portal.azure.com?auzre-portal=true), vous devez configurer plusieurs détails pour créer votre ressource. Configurez-la avec les paramètres suivants :
+3. Dans la page *Créer une sécurité du contenu* dans le [Portail Azure](https://portal.azure.com?azure-portal=true), vous devez configurer plusieurs détails pour créer votre ressource. Configurez-la avec les paramètres suivants :
     - **Abonnement** : *votre abonnement Azure*.
     - **Groupe de ressources** : *sélectionnez ou créez un groupe de ressources portant un nom unique*.
-    - **Région** : *choisissez une région disponible*.
+    - **Région** : *choisissez une région disponible. Si vous êtes dans l’est des États-Unis, utilisez « USA Est 2 »*.
     - **Nom** : *entrez un nom unique.*
     - **Niveau tarifaire** : F0 gratuit
 
-1. Sélectionnez **Vérifier + créer**, puis passez en revue la configuration. Sélectionnez ensuite **Créer**. L’écran indique quand le déploiement est terminé. 
+4. Sélectionnez **Vérifier + créer**, puis passez en revue la configuration. Sélectionnez ensuite **Créer**. L’écran indique quand le déploiement est terminé. 
 
 *Félicitations ! Vous venez de créer ou d’approvisionner une ressource Azure AI services. Celle que vous avez approvisionnée dans ce cas précis est une ressource de service Content Safety de service unique.*
 
-1. Une fois le déploiement terminé, ouvrez un nouvel onglet et revenez à [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). 
+5. Une fois le déploiement terminé, ouvrez un nouvel onglet et revenez à [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). 
 
-1. Sélectionnez à nouveau l’icône **Paramètres** en haut à droite de l’écran. Cette fois, vous devriez voir que votre ressource nouvellement créée a été ajoutée à la liste.  
+6. Sélectionnez à nouveau l’icône **Paramètres** en haut à droite de l’écran. Cette fois, vous devriez voir que votre ressource nouvellement créée a été ajoutée à la liste.  
 
-1. Dans la page Paramètres de Content Safety Studio, sélectionnez la ressource eu service Azure AI que vous venez de créer, puis cliquez sur **Utiliser la ressource** en bas de l’écran. Vous serez redirigé vers la page d’accueil du studio. Vous pouvez maintenant commencer à utiliser le studio avec votre ressource nouvellement créée.
+>**Remarque** : Si vous utilisez un abonnement Cloud Slice, vous pouvez ignorer les étapes 7 à 12 et passer à l’étape 13. Sinon, passez à l’étape 7.
+
+7. Sélectionnez **Afficher toutes les propriétés dans le portail Azure** en bas de l’écran *Paramètres*. 
+
+![Capture d’écran de l’affichage de toutes les propriétés dans le lien du portail Azure.](./media/content-safety/view-all-properties.png)
+
+8. Dans le portail Azure, sélectionnez la ressource *Sécurité du Contenu* que vous venez de créer. Dans le volet gauche, sélectionnez **Contrôle d’accès (IAM)**. Ensuite, dans le volet ouvert, sélectionnez **Ajouter** en regard du signe plus, puis sélectionnez **Ajouter une attribution de rôle**. 
+
+![Capture d’écran de l’emplacement où sélectionner Ajouter une attribution de rôle dans le volet Contrôle d’accès.](./media/content-safety/access-control-step-one.png)
+
+9. Recherchez **Utilisateur Cognitive Services** dans la liste des rôles, puis sélectionnez-le. Sélectionnez ensuite **Suivant**. 
+
+10. Utilisez les paramètres suivants pour vous attribuer le rôle : 
+    - **Attribuer l’accès à** : sélectionnez *Utilisateur, groupe ou principal de service*
+    - **Membres** : cliquez sur *Sélectionner des membres*
+        - Dans le volet *Sélectionner des membres*, recherchez votre nom. Cliquez sur l’icône plus en regard de votre nom. Puis cliquez sur **Sélectionner**.
+    - **Description** : *laissez vide*
+
+11. Sélectionnez **Passer en revue et attribuer**, puis à nouveau **Passer en revue et attribuer** pour ajouter l’attribution de rôle.    
+
+12. Revenez à Content Safety Studio à l’adresse [https://contentsafety.cognitive.azure.com](https://contentsafety.cognitive.azure.com). Ensuite, sélectionnez l’icône **Paramètres** en haut à droite de l’écran. 
+
+![Capture d’écran de l’icône des paramètres en haut à droite de l’écran, à côté des icônes de cloche, du point d’interrogation et du sourire.](./media/content-safety/settings-toggle.png)
+ 
+13. Sélectionnez la ressource de service Azure AI que vous venez de créer. Vérifiez que, sous *Attributions de rôles actuelles*, figurent à la fois *Utilisateur Cognitive Services* et *Propriétaire*.
+
+![Capture d’écran des attributions de rôles actuelles.](./media/content-safety/access-control-check-step.png)
+
+14. Cliquez sur **Utiliser la ressource** en bas de l’écran. Vous serez redirigé vers la page d’accueil du studio. Vous pouvez maintenant commencer à utiliser le studio avec votre ressource nouvellement créée.
 
 ## Essayer la modération de texte dans Content Safety Studio
 
