@@ -9,8 +9,6 @@ Dans cet exercice, vous allez utiliser la fonctionnalité Machine Learning autom
 
 Cet exercice devrait prendre environ **30** minutes.
 
->**Important** à ce stade, il est possible de créer et de déployer un modèle en tant que service web dans Azure Machine Learning Studio, mais pas de le tester dans Studio. Par conséquent, toute la dernière section des étapes avant le nettoyage est possible. Nous allons nous mettre à jour à mesure que cela change.
-
 ## Création d’un espace de travail Microsoft Azure Machine Learning
 
 Pour utiliser Azure Machine Learning, vous devez approvisionner un espace de travail Azure Machine Learning dans votre abonnement Azure. Vous allez ensuite pouvoir utiliser Azure Machine Learning studio pour utiliser les ressources de votre espace de travail.
@@ -47,8 +45,8 @@ Le Machine Learning automatisé vous permet d’essayer plusieurs algorithmes et
 
     **Paramètres de base** :
 
-    - **Nom de la tâche** : mslearn-bike-automl
-    - **Nom de la nouvelle expérience** : mslearn-bike-rental
+    - **Nom du travail** : `mslearn-bike-automl`
+    - **Nom de la nouvelle expérience** : `mslearn-bike-rental`
     - **Description** : Machine Learning automatisé pour la prédiction des locations de vélos
     - **Balises** : *aucune*
 
@@ -57,24 +55,16 @@ Le Machine Learning automatisé vous permet d’essayer plusieurs algorithmes et
     - **Sélectionner le type de tâche** : Régression
     - **Sélectionner un jeu de données** : créer un jeu de données avec les paramètres suivants :
         - **Type de données** :
-            - **Nom**: bike-rentals
-            - **Description** : Données historiques de location de vélos
-            - **Type** : Tabulaire
+            - **Nom :** `bike-rentals`
+            - **Description** : `Historic bike rental data`
+            - **Type** : Table (mltable)
         - **Source des données** :
-            - Sélectionner **À partir de fichiers web**
-        - **URL web** :
-            - **URL web** : `https://aka.ms/bike-rentals`
-            - **Ignorer la validation des données** : *ne pas sélectionner*
-        - **Paramètres**:
-            - **Format de fichier** : Délimité
-            - **Délimiteur** : Virgule
-            - **Encodage** : UTF-8
-            - **En-têtes de colonnes** : seul le premier fichier comporte des en-têtes
-            - **Ignorer les lignes** : Aucune
-            - **Le jeu de données contient des données à plusieurs lignes** : *ne les sélectionnez pas*
-        - **Schéma** :
-            - Inclure toutes les colonnes autres que **Chemin**
-            - Examiner les types détectés automatiquement
+            - Sélectionnez **À partir de fichiers locaux**
+        - **Type de stockage de destination** :
+            - **Datastore type** (Type de magasin de données) : Stockage Blob Azure
+            - **Nom** : workspaceblobstore
+        - **Sélection MLTable** :
+            - **Charger le dossier** : *Télécharger le dossier qui contient les deux fichiers à charger à partir de* `https://aka.ms/bike-rentals`
 
         Sélectionnez **Créer**. Une fois le jeu de données créé, sélectionnez le jeu de données **bike-rentals** pour continuer à envoyer le travail de ML automatisé.
 
@@ -82,19 +72,20 @@ Le Machine Learning automatisé vous permet d’essayer plusieurs algorithmes et
 
     - **Type de tâche** : Régression
     - **Jeu de données** : bike-rentals
-    - **Colonne cible** : Locations (entier)
+    - **Colonne cible** : rentals (entier)
     - **Paramètres de configuration supplémentaires** :
-        - **Métrique principale** : Erreur quadratique moyenne normalisée
+        - **Métrique principale** : NormalizedRootMeanSquaredError
         - **Expliquer le meilleur modèle** : *Non sélectionné*
+        - **Activer l’empilement d’ensembles** : *Non sélectionné*
         - **Utiliser tous les modèles pris en charge** : <u>Un</u>sélectionné. *Vous allez restreindre le travail pour essayer uniquement quelques algorithmes spécifiques.*
         - **Modèles autorisés** : *Sélectionnez uniquement **RandomForest** et **LightGBM**. Normalement, vous pouvez en essayer autant que possible, mais chaque modèle ajouté augmente le temps nécessaire à l’exécution du travail.*
     - **Limites** : *Développer cette section*
-        - **Nombre maximal d’essais**: 3
-        - **Nombre maximal d’essais simultanés** : 3
-        - **Nombre maximal de nœuds** : 3
-        - **Seuil de score de métrique** : 0,085 (*si un modèle atteint ainsi un score de métrique d’erreur quadratique moyenne normalisée égal ou inférieur à 0,085, le travail s’achève.*)
-        - **Délai d’expiration** : 15
-        - **Délai d’expiration de l’itération** : 15
+        - **Nombre maximal d’essais** : `3`
+        - **Nombre maximal d’essais simultanés** : `3`
+        - **Nombre maximal de nœuds** : `3`
+        - **Seuil de score de métrique** : `0.085` (*si un modèle atteint ainsi un score de métrique d’erreur quadratique moyenne normalisée égal ou inférieur à 0,085, le travail s’achève*)
+        - **Délai d’expiration eXPERIMENT** : `15`
+        - **Délai d’expiration de l’itération** : `15`
         - **Activer la résiliation anticipée** : *Sélectionné*
     - **Validation et test** :
         - **Type de validation** : fractionnement de validation d’entraînement
@@ -126,24 +117,25 @@ Une fois le travail de Machine Learning automatisé terminé, vous pouvez évalu
   
 1. Sélectionnez le texte sous **Nom de l’algorithme** correspondant au meilleur modèle pour voir ses détails.
 
-1. Sélectionnez l’onglet **Métriques** et sélectionnez les graphiques de **résiduels** et de comparaison **valeurs prédites-valeurs réelles** s’ils ne sont pas déjà sélectionnés. 
+1. Sélectionnez l’onglet **Métriques** et sélectionnez les graphiques de **résiduels** et de comparaison **valeurs prédites-valeurs réelles** s’ils ne sont pas déjà sélectionnés.
 
-    Regardez les graphiques qui montrent les performances du modèle. Le graphique des **résidus** montre les *résidus* (les différences entre les valeurs prédites et réelles) sous forme d’histogramme. Le graphique **predicted_true** compare les valeurs prédites aux vraies valeurs. 
+    Regardez les graphiques qui montrent les performances du modèle. Le graphique des **résidus** montre les *résidus* (les différences entre les valeurs prédites et réelles) sous forme d’histogramme. Le graphique **predicted_true** compare les valeurs prédites aux vraies valeurs.
 
 ## Déployer et tester le modèle
 
-1. Sous l’onglet **Modèle** du meilleur modèle entraîné par votre travail de Machine Learning automatisé, sélectionnez **Déployer** et utilisez l’option du **Service Web** pour déployer le modèle avec les paramètres suivants :
-    - **Nom** : prédiction-locations
-    - **Description** : Prédire les locations de vélos
-    - **Type de capacité de calcul** : Instance de conteneur Azure
-    - **Activer l’authentification** : *Sélectionné*
+1. Sous l’onglet **Modèle** du meilleur modèle entraîné par votre travail de Machine Learning automatisé, sélectionnez **Déployer**, puis utilisez l’option **Point de terminaison en temps réel** pour déployer le modèle avec les paramètres suivants :
+    - **Machine virtuelle** : Standard_DS3_v2
+    - **Nombre d’instances** : 3
+    - **Point de terminaison** : Nouvelle
+    - **Nom du point de terminaison** : *Laissez la valeur par défaut ou assurez-vous qu’elle est globalement unique*
+    - **Nom du déploiement** : *Conserver la valeur par défaut*
+    - **Collecte des données d’inférence** : *Disabled*
+    - **Empaqueter le modèle** : *Disabled*
 
 1. Attendez que le déploiement commence. Cette opération peut prendre quelques secondes. Le **état Déployé** pour le point de terminaison **predict-rentals** est indiqué dans la partie centrale de la page comme *En cours d’exécution*.
 1. Attendez que l’**état du déploiement** passe à *Réussi*. Cette opération peut prendre 5 à 10 minutes.
 
 ## Tester le service déployé
-
->**Important** Azure Machine Learning Studio ne prend pas en charge le type de création de jeu de données nécessaire pour utiliser le test de déploiement. Nous vous tiendrons au courant dès qu'une solution sera trouvée. 
 
 Vous pouvez maintenant tester votre service déployé.
 
