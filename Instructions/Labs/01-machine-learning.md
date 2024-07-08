@@ -64,7 +64,7 @@ Le Machine Learning automatisé vous permet d’essayer plusieurs algorithmes et
             - **Datastore type** (Type de magasin de données) : Stockage Blob Azure
             - **Nom** : workspaceblobstore
         - **Sélection MLTable** :
-            - **Charger le dossier** : *Télécharger le dossier qui contient les deux fichiers à charger à partir de* `https://aka.ms/bike-rentals`
+            - **Charger le dossier** : *Télécharger et décompresser le dossier qui contient les deux fichiers à charger* `https://aka.ms/bike-rentals`
 
         Sélectionnez **Créer**. Une fois le jeu de données créé, sélectionnez le jeu de données **bike-rentals** pour continuer à envoyer le travail de ML automatisé.
 
@@ -145,29 +145,31 @@ Vous pouvez maintenant tester votre service déployé.
 
 1. Dans le volet **Entrer des données pour tester le point de terminaison**, remplacez le modèle JSON par les données de l’entrée suivante :
 
-    ```JSON
+    ```json
     {
-      "Inputs": { 
-        "data": [
-          {
-            "day": 1,
-            "mnth": 1,   
-            "year": 2022,
-            "season": 2,
-            "holiday": 0,
-            "weekday": 1,
-            "workingday": 1,
-            "weathersit": 2, 
-            "temp": 0.3, 
-            "atemp": 0.3,
-            "hum": 0.3,
-            "windspeed": 0.3 
-          }
-        ]    
-      },   
-      "GlobalParameters": 1.0
+      "input_data": {
+        "columns": [
+            {
+                "day": 1,
+                "mnth": 1,   
+                "year": 2022,
+                "season": 2,
+                "holiday": 0,
+                "weekday": 1,
+                "workingday": 1,
+                "weathersit": 2, 
+                "temp": 0.3, 
+                "atemp": 0.3,
+                "hum": 0.3,
+                "windspeed": 0.3 
+            }
+        ],
+        "index": [],
+        "data": []
+      }
     }
     ```
+
 
 1. Cliquez sur le bouton **Test**.
 
