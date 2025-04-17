@@ -13,9 +13,9 @@ Le sous-ensemble de laboratoires AI-900 utilisé dans ce cours est associé à c
 | # laboratoire du formateur AI-900 | Rubrique | Instructions |
 | --- | --- | --- |
 | AI-900 Vue d’ensemble de l’IA | Explorer Azure AI Services | [Instructions du labo](https://go.microsoft.com/fwlink/?linkid=2250253) |
-| AI-900 Vision par ordinateur | Analyser des images dans Vision Studio | [Instructions du labo](https://go.microsoft.com/fwlink/?linkid=2250145) |
-| AI-900 Traitement du langage naturel | Analyser du texte avec Language Studio | [Instructions du labo](https://go.microsoft.com/fwlink/?linkid=2250314) |
-| AI-900 Intelligence documentaire | Extraire des données de formulaire dans Document Intelligence Studio | [Instructions du labo](https://go.microsoft.com/fwlink/?linkid=2250315) |
-| AI-900 IA générative | Découvrir Microsoft Copilot dans Microsoft Edge | [Instructions du labo](https://go.microsoft.com/fwlink/?linkid=2249955) |
+| AI-900 Vision par ordinateur | Analyser des images dans Azure AI Foundry | [Instructions du labo](https://go.microsoft.com/fwlink/?linkid=2250145) |
+| AI-900 Traitement du langage naturel | Analyser du texte avec Azure AI Foundry | [Instructions du labo](https://go.microsoft.com/fwlink/?linkid=2250314) |
+| AI-900 Intelligence documentaire | Extraire des données de formulaire dans Azure AI Foundry | [Instructions du labo](https://go.microsoft.com/fwlink/?linkid=2250315) |
+| AI-900 IA générative | Explorer l’IA générative dans Azure AI Foundry | [Instructions du labo](https://go.microsoft.com/fwlink/?linkid=2249955) |
 
 
