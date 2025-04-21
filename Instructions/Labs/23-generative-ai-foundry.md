@@ -3,7 +3,7 @@ lab:
   title: "Explorer l’IA générative dans le portail Azure\_AI Foundry"
 ---
 
-# Explorer l’IA générative dans le portail Azure AI Foundry
+# Explorer l’IA générative dans le portail Azure AI Foundry
 
 L’IA générative fait référence à une catégorie de fonctionnalités au sein de l’IA qui créent du contenu. Les personnes interagissent généralement avec l’IA générative qui est intégrée aux applications de conversation. Dans cet exercice, vous essayez l’IA générative dans le portail Azure AI Foundry, la plateforme de Microsoft pour la création d’applications intelligentes. 
 
@@ -21,7 +21,7 @@ L’IA générative fait référence à une catégorie de fonctionnalités au se
  
     ![Capture d’écran du volet Créer un projet avec des noms générés automatiquement pour le hub et le projet.](./media/azure-ai-foundry-create-project.png)
 
-    > **Important** : vous aurez besoin d’une ressource de services Azure AI configurée dans un emplacement spécifique pour effectuer le reste du labo.
+> **Important** : vous aurez besoin d’une ressource de services Azure AI configurée dans un emplacement spécifique pour effectuer le reste du labo.
 
 1. Dans le même volet *Créer un projet*, sélectionnez **Personnaliser** et sélectionnez l’un des **emplacements** suivants : USA Est, France Centre, Corée Centre, Europe Ouest ou USA Ouest pour terminer le reste du labo. Sélectionnez ensuite **Créer**. 
 
