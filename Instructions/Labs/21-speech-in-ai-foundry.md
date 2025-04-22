@@ -45,9 +45,9 @@ Dans cet exercice, vous allez utiliser Azure AI Speech dans le portail Azure 
 
 ## Explorer la reconnaissance vocale dans le terrain de jeu Speech d’Azure AI Foundry
 
-Essayons la *reconnaissance vocale* dans le terrain de jeu Speech d’Azure AI Foundry. 
+Essayons la *reconnaissance vocale en temps réel* dans le terrain de jeu Speech d’Azure AI Foundry. 
 
-1. Dans la page *Speech*, faites défiler vers le bas et sélectionnez **Transcription en temps réel** dans *Essayer les fonctionnalités Speech*. Vous serez dirigé vers le *terrain de jeu Speech*. 
+1. Dans la page *Speech*, faites défiler vers le bas et sélectionnez **Reconnaissance vocale en temps réel** dans *Essayer les fonctionnalités Speech*. Vous serez dirigé vers le *terrain de jeu Speech*. 
 
 1. Sélectionnez [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) pour télécharger **speech.zip**. Ouvrez le dossier . 
 
@@ -59,7 +59,7 @@ Essayons la *reconnaissance vocale* dans le terrain de jeu Speech d’Azure AI�
 
 1. Passez en revue la sortie, qui aurait normalement reconnu et transcrit l’audio en texte.
 
-Dans cet exercice, vous avez essayé les services Azure AI Speech dans le terrain de jeu Speech d’Azure AI Foundry. Vous avez ensuite utilisé la transcription en temps réel pour transcrire un enregistrement audio. Vous avez pu voir la transcription du texte générée au fur et à mesure de la lecture du fichier audio.
+Dans cet exercice, vous avez essayé les services Azure AI Speech dans le terrain de jeu Speech d’Azure AI Foundry. Vous avez ensuite utilisé la reconnaissance vocale en temps réel pour transcrire un enregistrement audio. Vous avez pu voir la transcription du texte générée au fur et à mesure de la lecture du fichier audio.
 
 ## Nettoyage
 
@@ -70,4 +70,4 @@ Si vous n’avez pas l’intention d’effectuer plus d’exercices, supprimez l
 
 ## En savoir plus
 
-Cet exercice n’a démontré qu’une des nombreuses fonctionnalités du service de reconnaissance vocale. Pour en savoir plus sur ce que ce service est capable de faire, consultez la [page Speech](https://azure.microsoft.com/services/cognitive-services/speech-services).
+Cet exercice n’a démontré que quelques fonctionnalités du service Speech. Pour en savoir plus sur ce que ce service est capable de faire, consultez la [page Speech](https://azure.microsoft.com/services/cognitive-services/speech-services).

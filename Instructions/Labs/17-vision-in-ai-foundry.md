@@ -79,13 +79,15 @@ La fonctionnalité suivante que vous allez essayer est la fonctionnalité *Extra
 
 1. Revenez à la page *Vision + Document* d’Azure AI Foundry, sélectionnez l’onglet **Image**, puis la vignette **Extraction de balise commune**.
 
-1. Ouvrez le dossier qui contient les images que vous avez téléchargées et recherchez le fichier nommé **store-image-2.jpg**, qui ressemble à ceci :
+2. Dans la section **Choisir le modèle que vous souhaitez essayer**, ne décochez pas l’option **Produit prédéfini et modèle différentiel**. Dans le champ **Choisissez votre langue**, sélectionnez **Anglais** ou la langue de votre choix.
+
+3. Ouvrez le dossier qui contient les images que vous avez téléchargées et recherchez le fichier nommé **store-image-2.jpg**, qui ressemble à ceci :
 
     ![Image d’une personne munie d’un panier d’achat dans un supermarché](./media/analyze-images-vision/store-camera-2.jpg)
 
-1. Chargez le fichier **store-camera-2.jpg**.
+4. Chargez le fichier **store-camera-2.jpg**.
 
-1. Passez en revue la liste des balises extraites de l’image et le score de confiance pour chacune d’entre elles dans le panneau des attributs détectés. Le score de confiance correspond ici à la probabilité que le texte de l’attribut détecté décrive réellement ce qui se trouve dans l’image. Remarquez dans la liste des étiquettes qu’elle inclut non seulement des objets, mais aussi des actions, telles que *faire des achats*, *vendre*et *se tenir debout*.
+5. Passez en revue la liste des balises extraites de l’image et le score de confiance pour chacune d’entre elles dans le panneau des attributs détectés. Le score de confiance correspond ici à la probabilité que le texte de l’attribut détecté décrive réellement ce qui se trouve dans l’image. Remarquez dans la liste des étiquettes qu’elle inclut non seulement des objets, mais aussi des actions, telles que *faire des achats*, *vendre*et *se tenir debout*.
 
     ![Capture d’écran du panneau des attributs de détection dans Vision Studio avec le texte et les indices de confiance affichés à côté de l’image originale.](./media/analyze-images-vision/detect-attributes.png)
 
@@ -94,6 +96,8 @@ La fonctionnalité suivante que vous allez essayer est la fonctionnalité *Extra
 Dans cette tâche, vous utilisez la fonctionnalité **Détection d’objet** de Analyse d’images. La détection d’objets permet de détecter et d’extraire des cadres englobants sur la base de milliers d’objets et d’êtres vivants reconnaissables.
 
 1. Revenez à la page *Vision + Document* d’Azure AI Foundry, sélectionnez l’onglet **Image**, puis la vignette **Détection d’objet courante**.
+
+1. Dans la section **Choisir le modèle que vous souhaitez essayer**, ne décochez pas l’option **Produit prédéfini et modèle différentiel**.
 
 1. Ouvrez le dossier qui contient les images que vous avez téléchargées et recherchez le fichier nommé **store-image-3.jpg**, qui ressemble à ceci :
 
