@@ -7,7 +7,7 @@ lab:
 
 Dans cet exercice, vous allez utiliser la fonctionnalité Machine Learning automatisé dans Azure Machine Learning pour entraîner et évaluer un modèle Machine Learning. Vous allez ensuite déployer et tester le modèle entraîné.
 
-Cet exercice devrait prendre environ **30** minutes.
+Cet exercice devrait prendre environ **35** minutes.
 
 ## Création d’un espace de travail Microsoft Azure Machine Learning
 
@@ -21,7 +21,7 @@ Pour utiliser Azure Machine Learning, vous devez approvisionner un espace de tra
     - **Abonnement** : *votre abonnement Azure*.
     - **Groupe de ressources** : *créez ou sélectionnez un groupe de ressources*.
     - **Nom** : *Entrez un nom unique pour votre espace de travail*.
-    - **Région** : *sélectionnez la région géographique la plus proche*.
+    - **Région** : USA Est.
     - **Compte de stockage** : *notez le nouveau compte de stockage par défaut à créer pour votre espace de travail*.
     - **Coffre de clés** : *notez le nouveau coffre de clés par défaut, qui va être créé pour votre espace de travail*.
     - **Application Insights** : *notez la nouvelle ressource Application Insights par défaut, qui va être créée pour votre espace de travail*.
@@ -29,7 +29,9 @@ Pour utiliser Azure Machine Learning, vous devez approvisionner un espace de tra
 
 1. Sélectionnez **Vérifier + créer**, puis sélectionnez **Créer**. Attendez que votre espace de travail soit créé (cela peut prendre quelques minutes), puis accédez à la ressource déployée.
 
-1. Sélectionnez **Lancer Studio** (ou ouvrez un nouvel onglet de navigateur, accédez à [https://ml.azure.com](https://ml.azure.com?azure-portal=true), puis connectez-vous à Azure Machine Learning Studio à l’aide de votre compte Microsoft). Fermez tous les messages affichés.
+#### Lancer Studio 
+
+1. Dans la ressource de votre espace de travail Azure Machine Learning, sélectionnez **Lancer Studio** (ou ouvrez un nouvel onglet de navigateur et accédez à [https://ml.azure.com](https://ml.azure.com?azure-portal=true), puis connectez-vous à Azure Machine Learning Studio à l’aide de votre compte Microsoft). Fermez tous les messages affichés.
 
 1. Dans Azure Machine Learning Studio, vous devez voir l’espace de travail qui vient d’être créé. Si ce n’est pas le cas, sélectionnez **Tous les espaces de travail** dans le menu de gauche, puis l’espace de travail créé.
 
@@ -45,7 +47,7 @@ Le Machine Learning automatisé vous permet d’essayer plusieurs algorithmes et
 
     **Paramètres de base** :
 
-    - **Nom du travail** : `mslearn-bike-automl`
+    - **Nom du travail** : le champ Nom du travail doit déjà être prérempli avec un nom unique. Gardez-le tel quel.
     - **Nom de la nouvelle expérience** : `mslearn-bike-rental`
     - **Description** : Machine Learning automatisé pour la prédiction des locations de vélos
     - **Balises** : *aucune*
@@ -84,7 +86,7 @@ Le Machine Learning automatisé vous permet d’essayer plusieurs algorithmes et
         - **Nombre maximal d’essais simultanés** : `3`
         - **Nombre maximal de nœuds** : `3`
         - **Seuil de score de métrique** : `0.085` (*si un modèle atteint ainsi un score de métrique d’erreur quadratique moyenne normalisée égal ou inférieur à 0,085, le travail s’achève*)
-        - **Délai d’expiration eXPERIMENT** : `15`
+        - **Délai d’expiration de l’expérience** : `15`
         - **Délai d’expiration de l’itération** : `15`
         - **Activer la résiliation anticipée** : *Sélectionné*
     - **Validation et test** :
@@ -112,8 +114,6 @@ Une fois le travail de Machine Learning automatisé terminé, vous pouvez évalu
 
 1. Sous l’onglet **Vue d’ensemble** du travail de machine learning automatisé, notez le meilleur récapitulatif du modèle.
     ![Capture d’écran du meilleur récapitulatif de modèle du travail de machine learning automatisé avec un encadré autour du nom de l’algorithme.](./media/use-automated-machine-learning/complete-run.png)
-
-    > **Remarque** : Vous pouvez voir un message sous l’état « Avertissement : Score de sortie spécifié pour l’utilisateur atteint... ». Il s’agit d’un message attendu. Passez à l’étape suivante.
   
 1. Sélectionnez le texte sous **Nom de l’algorithme** correspondant au meilleur modèle pour voir ses détails.
 
@@ -132,6 +132,8 @@ Une fois le travail de Machine Learning automatisé terminé, vous pouvez évalu
     - **Collecte des données d’inférence** : *Disabled*
     - **Empaqueter le modèle** : *Disabled*
 
+    > **Remarque** : si vous recevez un message indiquant qu’il n’y a pas suffisamment de quota pour sélectionner la machine virtuelle *Standard_DS3_v2*, sélectionnez-en une autre.
+
 1. Attendez que le déploiement commence. Cette opération peut prendre quelques secondes. Le **état Déployé** pour le point de terminaison **predict-rentals** est indiqué dans la partie centrale de la page comme *En cours d’exécution*.
 1. Attendez que l’**état du déploiement** passe à *Réussi*. Cette opération peut prendre 5 à 10 minutes.
 
@@ -146,41 +148,37 @@ Vous pouvez maintenant tester votre service déployé.
 1. Dans le volet **Entrer des données pour tester le point de terminaison**, remplacez le modèle JSON par les données de l’entrée suivante :
 
     ```json
-    {
-      "input_data": {
-        "columns": [
-            {
-                "day": 1,
-                "mnth": 1,   
-                "year": 2022,
-                "season": 2,
-                "holiday": 0,
-                "weekday": 1,
-                "workingday": 1,
-                "weathersit": 2, 
-                "temp": 0.3, 
-                "atemp": 0.3,
-                "hum": 0.3,
-                "windspeed": 0.3 
-            }
-        ],
-        "index": [],
-        "data": []
-      }
+      {
+     "input_data": {
+       "columns": [
+         "day",
+         "mnth",
+         "year",
+         "season",
+         "holiday",
+         "weekday",
+         "workingday",
+         "weathersit",
+         "temp",
+         "atemp",
+         "hum",
+         "windspeed"
+       ],
+       "index": [0],
+       "data": [[1,1,2022,2,0,1,1,2,0.3,0.3,0.3,0.3]]
+     }
     }
-    ```
 
+    ```
 
 1. Cliquez sur le bouton **Test**.
 
 1. Consultez les résultats des tests qui comprennent un nombre prévu de locations en fonction des fonctionnalités d’entrée – semblables à ceci :
 
     ```JSON
-    {
-      "Results": [
-        444.27799000000000
-      ]
-    }
+    [
+      352.3564674945718
+    ]
     ```
 
     Le volet Tester a récupéré les données d’entrée et a utilisé le modèle sur lequel vous avez effectué l'apprentissage pour retourner le nombre prévu de locations.
