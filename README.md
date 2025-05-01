@@ -1,11 +1,3 @@
-#README
-
-We've turned off the ability to report issues directly on this repo and do not monitor PRs.
-
-Provide feedback here: https://aka.ms/provide-feedback
-
-Or, if you are a trainer with a microsoft.com email address, please create a ticket in AzDO.
-
 # Microsoft Azure AI - Notions fondamentales Exercices
 
 Ce référentiel contient des instructions et des ressources pour les exercices pratiques dans le didacticiel officiel de Microsoft pour prendre en charge la certification [Microsoft Certified: Azure AI Fundamentals](https://learn.microsoft.com/credentials/certifications/azure-ai-fundamentals/). Les exercices sont conçus pour compléter les modules de formation associés sur [Microsoft Learn](https://learn.microsoft.com/training), et un <u>sous-ensemble</u> de ces exercices comprend les laboratoires pratiques dans la formation officielle dispensée par un instructeur [AI-900: Concepts de base de Microsoft Azure AI](https://learn.microsoft.com/en-us/training/courses/ai-900t00).
