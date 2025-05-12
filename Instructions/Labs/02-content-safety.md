@@ -5,86 +5,71 @@ lab:
 
 # Explorer Azure AI Services
 
-Azure AI services aide les utilisateurs à créer des applications avec des API et modèles prêts à l’emploi, prédéfinis et personnalisables. Dans cet exercice, vous allez examiner l’un des services, Azure AI Content Safety, dans Content Safety Studio.
+Azure AI services aide les utilisateurs à créer des applications avec des API et modèles prêts à l’emploi, prédéfinis et personnalisables. Dans cet exercice, vous allez créer une ressource dans le Portail Azure et tester les services Azure AI. L’objectif de cet exercice est d’avoir une compréhension générale de la manière dont les services Azure AI sont approvisionnés et utilisés.
 
-Le Studio de Sécurité du Contenu vous permet d’explorer la façon dont le contenu texte et image peut être modéré. Vous pouvez exécuter des tests sur des exemples de texte ou d’images et obtenir un score de gravité allant de sécurisé à élevé pour chaque catégorie. Dans cet exercice du lab, vous allez créer une ressource à service unique dans Content Safety Studio et tester ses fonctionnalités. 
+## Créer une ressource *Azure AI Services* dans le portail Azure
 
-> **Remarque** L’objectif de cet exercice est d’avoir une idée générale de la façon dont les services Azure AI services sont provisionnés et utilisés. Content Safety est utilisé à titre d’exemple, vous n’êtes pas censé devenir un expert en sécurité du contenu après cet exercice.
+1. Dans un onglet de navigateur, ouvrez le Portail Azure à l’adresse [https://portal.azure.com](https://portal.azure.com?azure-portal=true) et connectez-vous avec le compte Microsoft associé à votre abonnement Azure.
 
-## Naviguer dans Content Safety Studio 
-
-![Capture d’écran de la page d’accueil de Content Safety Studio.](./media/content-safety/content-safety-getting-started.png)
-
-1. Ouvrez [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). Si vous n’êtes pas connecté, vous devez le faire. Sélectionnez **Se connecter** en haut à droite de l’écran. Utilisez l’adresse e-mail et le mot de passe associés à votre abonnement Azure pour vous connecter. 
-
-2. Content Safety Studio est configuré comme de nombreux autres studios des Azure AI services. Dans le menu en haut de l’écran, cliquez sur l’icône à gauche d’*Azure AI*. Vous verrez une liste déroulante d’autres studios conçus pour le développement avec Azure AI services. Vous pouvez cliquer à nouveau sur l’icône pour masquer la liste.
-
-![Capture d’écran du menu de Content Safety Studio avec une sélection bascule ouverte pour passer à d’autres studios.](./media/content-safety/studio-toggle-icon.png)  
-
-## Associer une ressource au studio 
-
-Avant d’utiliser le studio, vous devez associer une ressource Azure AI services au studio. En fonction du studio, vous constaterez qu’il vous faut une ressource de service unique spécifique ou que vous pouvez utiliser une ressource multiservice générale. Dans le cas de Content Safety Studio, vous pouvez utiliser le service en créant une ressource *Sécurité du contenu* de service unique ou une ressource multiservice générale *Azure AI services*. Dans les étapes ci-dessous, nous allons créer une ressource Content Safety de service unique. 
-
-1. En haut à droite de l’écran, cliquez sur l’icône **Paramètres**. 
-
-![Capture d’écran de l’icône des paramètres en haut à droite de l’écran, à côté des icônes de cloche, du point d’interrogation et du sourire.](./media/content-safety/settings-toggle.png)
-
-2. Dans la page **Paramètres**, vous verrez un onglet *Répertoire* et un onglet *Ressource*. Sous l’onglet *Ressource*, sélectionnez **Créer une ressource**. Cela vous amène à la page pour créer une ressource dans le Portail Azure.
-
-> **Remarque** L’onglet *Répertoire* permet aux utilisateurs de sélectionner différents répertoires à partir desquels créer des ressources. Vous n’avez pas besoin de modifier ses paramètres, sauf si vous souhaitez utiliser un autre répertoire. 
-
-![Capture d’écran montrant où sélectionner « Créer une ressource » dans la page des paramètres de Content Safety Studio.](./media/content-safety/create-new-resource-from-studio.png)
-
-3. Dans la page *Créer une sécurité du contenu* dans le [Portail Azure](https://portal.azure.com?azure-portal=true), vous devez configurer plusieurs détails pour créer votre ressource. Configurez-la avec les paramètres suivants :
+1. Cliquez sur le bouton **&#65291;Créer une ressource** et recherchez *Azure AI services*. Sélectionnez **créer** un plan **Azure AI services**. Vous accédez à une page pour créer une ressource Azure AI services. Configurez-la avec les paramètres suivants :
     - **Abonnement** : *votre abonnement Azure*.
     - **Groupe de ressources** : *sélectionnez ou créez un groupe de ressources portant un nom unique*.
-    - **Région** : *choisissez une région disponible. Si vous êtes dans l’est des États-Unis, utilisez « USA Est 2 »*.
+    - **Région** : *Sélectionnez la région géographique la plus proche. Si vous êtes dans l’est des États-Unis, utilisez « USA Est 2 »*.
     - **Nom** : *entrez un nom unique.*
-    - **Niveau tarifaire** : F0 gratuit
+    - **Niveau tarifaire** : *Standard S0.*
+    - **En cochant cette case, je reconnais avoir lu et compris toutes les conditions ci-dessous** : *Sélectionné*.
 
-4. Sélectionnez **Vérifier + créer**, puis passez en revue la configuration. Sélectionnez ensuite **Créer**. L’écran indique quand le déploiement est terminé. 
+1. Sélectionnez **Vérifier + créer**, puis **Créer** et attendez la fin du déploiement.
 
-*Félicitations ! Vous venez de créer ou d’approvisionner une ressource Azure AI services. Celle que vous avez approvisionnée dans ce cas précis est une ressource de service Content Safety de service unique.*
+    *Félicitations ! Vous venez de créer ou d’approvisionner une ressource Azure AI services. Celle que vous avez approvisionnée dans ce cas précis est une ressource multiservice.*
 
-5. Une fois le déploiement terminé, ouvrez un nouvel onglet et revenez à [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). 
-
-6. Sélectionnez à nouveau l’icône **Paramètres** en haut à droite de l’écran. Cette fois, vous devriez voir que votre ressource nouvellement créée a été ajoutée à la liste.  
-
-<details>  
-    <summary><b>Résolution des problèmes</b> : autorisations pour les apprenants auto-rythmés</summary>
-    <p><b>Si vous utilisez un environnement de labo fourni par un instructeur, vous pouvez ignorer ces étapes.</b> Sinon, continuez en procédant comme suit :</p>
-    <ul>
-        <li>Sélectionnez <b>Afficher toutes les propriétés dans le portail Azure</b> en bas de l’écran *Paramètres*.</li>
-        <li>Dans le portail Azure, sélectionnez la ressource <em>Sécurité du Contenu</em> que vous venez de créer. Dans le volet gauche, sélectionnez <b>Contrôle d’accès (IAM)</b>. Ensuite, dans le volet ouvert, sélectionnez <b>Ajouter</b> en regard du signe plus, puis sélectionnez <b>Ajouter une attribution de rôle</b>.</li>
-        <li>Recherchez <b>Utilisateur Cognitive Services</b> dans la liste des rôles, puis sélectionnez-le. Sélectionnez ensuite <b>Suivant</b>. </li>
-        <li>Dans <b>Attribuer l’accès à</b>, choisissez <b>Utilisateur, groupe ou principal de service</b>, puis <b>+ Sélectionner des membres</b>, et sélectionnez votre nom. Laissez la description vide.</li>
-        <li>Cliquez sur <b>Suivant</b>. Dans la page <b>Type d’affectation</b>, sélectionnez le <b>Type d’affectation : actif</b>. Sélectionnez <b>Durée de l’affectation : permanent</b>. Cliquez sur <b>Suivant</b>.</li>
-        <li>Sélectionnez <b>Vérifier et attribuer</b>, puis <b>Vérifier et attribuer</b> pour ajouter l’attribution de rôle.</li>
-        <li>Revenez à Content Safety Studio à l’adresse https://contentsafety.cognitive.azure.com. Ensuite, sélectionnez l’icône <b>Paramètres</b> en haut à droite de l’écran. Sélectionnez la ressource Sécurité du Contenu que vous venez de créer. Vérifiez que les <em>attributions de rôles actuelles</em> incluent <b>l’utilisateur Cognitive Services</b>. Vous devrez peut-être attendre un moment et actualiser la page pour voir l’attribution de rôle s’afficher.</li>
-    </ul>
-</details>
-
-7. Si vous ne l’avez pas déjà fait, sélectionnez la ressource Sécurité du Contenu que vous avez créée. 
-
-8. Cliquez sur **Utiliser la ressource** en bas de l’écran. Vous serez redirigé vers la page d’accueil du studio. Vous pouvez maintenant commencer à utiliser le studio avec votre ressource nouvellement créée.
-
-## Essayer la modération de texte dans Content Safety Studio
-
-1. Dans la page d’accueil Content Safety Studio, sous *Exécuter des tests de modération*, accédez à la zone **Modérer le contenu de texte**, puis cliquez sur **Essayer**.
-2. Sous Exécuter un test simple, cliquez sur **Contenu sécurisé**. Le texte est affiché dans la zone ci-dessous. 
-3. Cliquez sur **Run test**. L’exécution d’un test appelle le modèle Deep Learning de Content Safety Service. Le modèle Deep Learning a déjà été entraîné pour reconnaître le contenu non sécurisé.
-4. Dans le panneau *Résultats*, examinez les résultats. Il y a quatre niveaux de gravité allant de sécurisé à élevé, et quatre types de contenu nuisible. Le service AI Sécurité du Contenu considère-t-il cet exemple comme acceptable ou non ? Il est important de souligner que les résultats se situent dans un intervalle de confiance. Un modèle bien entraîné, comme l’un des modèles prêts à l’emploi d’Azure AI, peut retourner des résultats qui ont une forte probabilité de correspondre à ce qu’un humain qualifierait pour le résultat. Chaque fois que vous exécutez un test, vous appelez à nouveau le modèle. 
-5. Essayez maintenant un autre échantillon. Sélectionnez le texte sous Contenu violent avec une faute d’orthographe. Vérifiez que le contenu s’affiche dans la zone ci-dessous.
-6. Cliquez sur **Exécuter le test** et examinez à nouveau les résultats dans le panneau Résultats. 
-
-Vous pouvez exécuter des tests sur tous les exemples fournis, puis examiner les résultats.
+1. Une fois le déploiement effectué, sélectionnez *Accéder à la ressource*. 
 
 ## Examiner les clés et le point de terminaison
 
-Ces fonctionnalités que vous avez testées peuvent être programmées dans toutes sortes d’applications. Les clés et le point de terminaison utilisés pour le développement d’applications se trouvent tous dans Content Safety Studio et le Portail Azure. 
+Pour intégrer les services Azure AI dans des applications, les développeurs ont besoin d’une clé de service et d’un point de terminaison. Les clés et le point de terminaison utilisés pour le développement d’applications se trouvent tous dans le portail Azure. 
 
-1. Dans Content Safety Studio, revenez à la page **Paramètres**, avec l’onglet *Ressources* sélectionné. Recherchez la ressource que vous avez utilisée. Faites défiler l’écran pour voir le point de terminaison et la clé de votre ressource. 
-2. Dans le Portail Azure, vous verrez qu’il s’agit du *même* point de terminaison et de *différentes* clés que dans votre ressource. Pour vérifier cela, accédez au [Portail Azure](https://portal.azure.com?auzre-portal=true). Recherchez *Sécurité du contenu* dans la barre de recherche supérieure. Recherchez votre ressource et cliquez dessus. Dans le menu de gauche, en dessous de *Gestion des ressources*, cherchez *Clés et points de terminaison*. Sélectionnez **Clés et points de terminaison** pour afficher le point de terminaison et les clés de votre ressource. 
+1. Dans le portail Azure, sélectionnez votre ressource. Dans le menu de gauche, en dessous de *Gestion des ressources*, cherchez *Clés et points de terminaison*. Sélectionnez **Clés et points de terminaison** pour afficher le point de terminaison et les clés de votre ressource. 
 
-Une fois que vous avez terminé, vous pouvez supprimer la ressource Sécurité du contenu du Portail Azure. La suppression de la ressource est un moyen de réduire les coûts qui s’accumulent lorsque la ressource existe déjà dans l’abonnement. Pour cela, accédez à la page **Vue d’ensemble** de votre ressource Sécurité du contenu. En haut de l’écran, sélectionnez **Supprimer**.
+## Consultez Azure AI Services en action.
+
+1. Dans un onglet de navigateur, accédez à [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+
+1. Connectez-vous avec votre compte. 
+
+1. Sous *Travail en dehors d’un projet*, sélectionnez la vignette **Afficher les services IA**.
+ 
+    ![Capture d’écran du menu de gauche de l’écran du projet avec Services d’IA sélectionnés.](./media/view-ai-foundry-outside-project.png)  
+
+1. Dans la page *Services d’IA*, sélectionnez la vignette *Vision + Document* pour essayer les fonctionnalités Azure AI Vision et Document.
+
+    ![Capture d’écran de la vignette Vision et Document sélectionnée dans la page Services d’IA.](./media/vision-document-tile.png)
+
+1. Sous *Afficher toutes les fonctionnalités Vision*, sélectionnez l’onglet **Visage**. 
+
+1. Sélectionnez la vignette de démonstration *Détecter les visages dans une image*. 
+
+1. Essayez le service Visage, qui est l’un des nombreux services Azure AI. Cliquez sur une image et consultez les attributs détectés. 
+
+    ![Capture d’écran de la démonstration de détection de visages dans le portail Azure AI Foundry.](./media/detect-faces-demo.png)
+
+1. Faites défiler vers le bas jusqu’à la section **Exécuter le code**. Sélectionnez **Afficher le code**. Faites défiler jusqu’à la section commençant par *import os*. Dans l’exemple de code fourni, vous verrez des espaces réservés où insérer la clé et le point de terminaison.
+
+    ![Capture d’écran de l’écran Afficher le code affichant les espaces réservés pour la clé et le point de terminaison.](./media/view-code-example.png) 
+
+1. Si vous deviez créer une application utilisant les services Azure AI, vous pourriez commencer par le code fourni. En remplaçant les espaces réservés par la clé et le point de terminaison de votre propre service, votre application pourrait envoyer des requêtes et recevoir des réponses utilisant les services Azure AI. Dans le cas du service Visage, la *requête* consiste à demander au service Visage d’analyser l’image. La *réponse* correspond aux attributs détectés. 
+
+    >**Remarque** : vous n’avez pas besoin de connaître la programmation pour effectuer les exercices de ce cours. Nous allons continuer à explorer les services Azure AI en action via le portail Azure AI Foundry.  
+ 
+## Nettoyage 
+
+Une fois que vous avez terminé, supprimez la ressource Azure AI Services dans le portail Azure. La suppression de la ressource est un moyen de réduire les coûts qui s’accumulent lorsque la ressource existe déjà dans l’abonnement. Pour cela, accédez à la page **Vue d’ensemble** de votre ressource Azure AI Services. En haut de l’écran, sélectionnez **Supprimer**.
+
+
+
+
+
+
+
+
 
