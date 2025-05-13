@@ -1,8 +1,3 @@
----
-lab:
-  title: "Explorer la sécurité du contenu dans Azure\_AI\_Foundry"
----
-
 # Explorer la sécurité du contenu dans Azure AI Foundry
 
 Azure AI services aide les utilisateurs à créer des applications avec des API et modèles prêts à l’emploi, prédéfinis et personnalisables. Dans cet exercice, vous allez examiner l’un des services, Azure AI Sécurité du Contenu, qui vous permet de modérer le contenu des textes et des images. Dans le portail Azure AI Foundry, la plateforme de Microsoft pour la création d’applications intelligentes vous permet d’utiliser Azure AI Sécurité du Contenu pour catégoriser le texte et lui attribuer un score de gravité. 
