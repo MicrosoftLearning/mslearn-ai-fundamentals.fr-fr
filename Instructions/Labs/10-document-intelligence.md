@@ -13,37 +13,38 @@ Dans cet exercice, vous allez utiliser les modèles prédéfinis d’Azure AI In
 
 ## Créer un projet dans le portail Azure AI Foundry
 
-1. Dans un onglet de navigateur, accédez à [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+Commençons par créer un projet Azure AI Foundry.
 
-1. Connectez-vous avec votre compte. 
+1. Dans un navigateur web, ouvrez le [portail Azure AI Foundry](https://ai.azure.com) à l’adresse `https://ai.azure.com` et connectez-vous en utilisant vos informations d’identification Azure. Fermez les conseils ou les volets de démarrage rapide ouverts la première fois que vous vous connectez et, si nécessaire, utilisez le logo **Azure AI Foundry** en haut à gauche pour accéder à la page d’accueil, qui ressemble à l’image suivante (fermez le volet **Aide** s’il est ouvert) :
 
-1. Sur la page d’accueil du portail Azure AI Foundry, sélectionnez **Créer un projet**. Dans Azure AI Foundry, les projets sont des conteneurs qui aident à organiser votre travail.  
+    ![Capture d’écran de la page d’accueil d’Azure AI Foundry avec l’option de création d’un assistant sélectionné.](./media/azure-ai-foundry-home-page.png)
 
-    ![Capture d’écran de la page d’accueil d’Azure AI Foundry avec l’option de création d’un projet sélectionné.](./media/azure-ai-foundry-home-page.png)
+1. Sur la page d’accueil, sélectionnez **+Créer un agent**.
 
-1. Dans le volet *Créer un projet*, vous verrez un nom de projet généré, que vous pouvez conserver en l’état. Selon que vous avez créé un hub par le passé, vous verrez une liste de *nouvelles* ressources Azure à créer ou une liste déroulante de hubs existants. Si vous voyez la liste déroulante des hubs existants, sélectionnez *Créer un hub*, créez un nom unique pour votre hub, puis sélectionnez *Suivant*.  
- 
-    ![Capture d’écran du volet Créer un projet avec des noms générés automatiquement pour le hub et le projet.](./media/azure-ai-foundry-create-project.png)
+1. Dans l’Assistant **Création d’un assistant**, entrez un nom valide pour votre assistant. 
 
-> **Important** : vous aurez besoin d’une ressource de services Azure AI configurée dans un emplacement spécifique pour effectuer le reste du labo.
+1. Sélectionnez **Options avancées** et définissez les paramètres suivants :
+    - **Ressource Azure AI Foundry** : *conservez le nom par défaut*
+    - **Abonnement** : *votre abonnement Azure*
+    - **Groupe de ressources** : *créez ou sélectionnez un groupe de ressources*
+    - **Région** : sélectionnez l’un des emplacements suivants.
+        * USA Est
+        * France Centre
+        * Centre de la Corée
+        * Europe Ouest
+        * USA Ouest
 
-1. Dans le même volet *Créer un projet*, sélectionnez **Personnaliser** et sélectionnez l’un des **emplacements** suivants : USA Est, France Centre, Corée Centre, Europe Ouest ou USA Ouest pour terminer le reste du labo. Sélectionnez ensuite **Créer**. 
+1. Vérifiez vos configurations, puis sélectionnez **Créer**. Attendez que le processus de configuration se termine.
 
-1. Notez les ressources créées : 
-- Azure AI services
-- Azure AI Hub
-- Projet Azure AI
-- Compte de stockage
-- Key vault
-- Resource group  
- 
-1. Une fois les ressources créées, vous serez redirigé vers la page *Vue d’ensemble* de votre projet. Dans le menu de gauche de l’écran, sélectionnez **Services d’IA**.
- 
-    ![Capture d’écran du menu de gauche de l’écran du projet avec Services d’IA sélectionnés.](./media/azure-ai-foundry-ai-services.png)  
+    >**Remarque** : si vous recevez une erreur d’autorisation, sélectionnez le bouton **Corriger** pour ajouter les autorisations appropriées pour continuer.
 
-1. Dans la page *Services d’IA*, sélectionnez la vignette *Vision + Document* pour essayer les fonctionnalités Azure AI Intelligence documentaire.
+1. Une fois votre projet créé, vous serez amené par défaut vers le terrain de jeu des assistants dans le portail Azure AI Foundry, qui devrait ressembler à l’image suivante :
 
-    ![Capture d’écran de la vignette Vision et Document sélectionnée dans la page Services d’IA.](./media/vision-document-tile.png)
+    ![Capture d’écran des détails d’un projet Azure AI dans le portail Azure AI Foundry.](./media/ai-foundry-project-2.png)
+
+1. Dans une nouvelle fenêtre de navigateur, ouvrez la [page d’exploration des services Azure AI](https://ai.azure.com/explore/aiservices).
+
+1. Dans la page *Services d’IA*, sélectionnez la vignette *Vision + Document* pour essayer les fonctionnalités Azure AI Vision et Document.
 
 ## Analyser un reçu avec Azure AI Intelligence documentaire dans Azure AI Foundry 
 
