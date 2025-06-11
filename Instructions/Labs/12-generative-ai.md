@@ -9,20 +9,15 @@ L’IA générative fait référence à une catégorie de fonctionnalités au se
 
 ## Créer un projet dans le portail Azure AI Foundry
 
-Commençons par créer un projet Azure AI Foundry.
+1. Dans un navigateur web, ouvrez le [portail Azure AI Foundry](https://ai.azure.com) à l’adresse `https://ai.azure.com` et connectez-vous en utilisant vos informations d’identification Azure. Fermez les conseils ou les volets de démarrage rapide ouverts lors de votre première connexion. 
 
-1. Dans un navigateur web, ouvrez le [portail Azure AI Foundry](https://ai.azure.com) à l’adresse `https://ai.azure.com` et connectez-vous en utilisant vos informations d’identification Azure. Fermez les conseils ou les volets de démarrage rapide ouverts la première fois que vous vous connectez et, si nécessaire, utilisez le logo **Azure AI Foundry** en haut à gauche pour accéder à la page d’accueil, qui ressemble à l’image suivante (fermez le volet **Aide** s’il est ouvert) :
+1. Dans le navigateur, accédez à `https://ai.azure.com/managementCenter/allResources` et sélectionnez **Créer**. Choisissez ensuite l’option permettant de créer une *ressource Azure AI Foundry*.
 
-    ![Capture d’écran de la page d’accueil d’Azure AI Foundry avec l’option de création d’un assistant sélectionné.](./media/azure-ai-foundry-home-page.png)
+1. Dans l’Assistant *Créer un projet*, entrez un nom valide pour votre projet.
 
-1. Sur la page d’accueil, sélectionnez **+Créer un assistant**.
-
-1. Dans l’Assistant **Création d’un assistant**, entrez un nom valide pour votre assistant. 
-
-1. Sélectionnez **Options avancées** et définissez les paramètres suivants :
-    - **Ressource Azure AI Foundry** : *conservez le nom par défaut*
-    - **Abonnement** : *votre abonnement Azure*
-    - **Groupe de ressources** : *créez ou sélectionnez un groupe de ressources*
+1. Développez les *options avancées* pour définir les paramètres suivants de votre projet :
+    - **Abonnement** : votre abonnement Azure.
+    - **Groupe de ressources** : créez ou sélectionnez un groupe de ressources.
     - **Région** : sélectionnez l’un des emplacements suivants.
         * USA Est
         * France Centre
@@ -30,13 +25,9 @@ Commençons par créer un projet Azure AI Foundry.
         * Europe Ouest
         * USA Ouest
 
-1. Vérifiez vos configurations, puis sélectionnez **Créer**. Attendez que le processus de configuration se termine.
+    Attendez que votre projet et votre hub soient créés.
 
-    >**Remarque** : si vous recevez une erreur d’autorisation, sélectionnez le bouton **Corriger** pour ajouter les autorisations appropriées pour continuer.
-
-1. Une fois votre projet créé, vous serez amené par défaut vers le terrain de jeu des assistants dans le portail Azure AI Foundry, qui devrait ressembler à l’image suivante :
-
-    ![Capture d’écran des détails d’un projet Azure AI dans le portail Azure AI Foundry.](./media/ai-foundry-project-2.png)
+1. Lorsque le projet est créé, vous accédez à une page *Vue d’ensemble* des détails du projet.
 
 1. Dans le menu de gauche de l’écran, sélectionnez **Terrains de jeu**.
 
@@ -44,10 +35,9 @@ Commençons par créer un projet Azure AI Foundry.
 
 1. Dans la page Terrains de jeu d’Azure AI Foundry, sélectionnez **Essayer le terrain de jeu de conversation**. Le terrain de jeu de conversation est une interface utilisateur qui vous permet d’essayer de créer une application de conversation avec différents modèles d’IA générative.  
 
-1. Pour utiliser le terrain de jeu de conversation, vous devez l’associer à un modèle déployé. Dans le terrain de jeu de conversation, sélectionnez **Créer un déploiement**. Recherchez et sélectionnez **GPT-4**. 
+1. Pour utiliser le terrain de jeu de conversation, vous devez l’associer à un modèle déployé. Dans le terrain de jeu de conversation, vous devez avoir sélectionné **gpt-4o**. Si vous ne voyez aucun déploiement, vous devez sélectionner **+ Créer un déploiement**, rechercher **gpt-4o**. Sélectionnez ensuite **Confirmer**, puis **Déployer**.
 
-1. Dans la fenêtre *Déployer un modèle*, conservez le nommage et la sélection par défaut, puis sélectionnez **Déployer**. Le déploiement du modèle peut prendre un moment. Vous pouvez vérifier l’état de votre déploiement en sélectionnant *Modèles et points de terminaison* dans le menu de gauche dans *Mes ressources*.
-1. Dans le terrain de jeu de conversation, vous pouvez utiliser votre modèle déployé lorsqu’il apparaît dans le menu de sélection *Déploiement*. Vérifiez que le modèle que vous avez déployé est sélectionné. Il est important de sélectionner **Appliquer les modifications** après avoir apporté des modifications à la *Configuration*. 
+1. Dans le terrain de jeu de conversation, vous pouvez utiliser votre modèle déployé lorsqu’il apparaît dans le menu de sélection *Déploiement*. Il est important de sélectionner **Appliquer les modifications** après avoir apporté des modifications à la *Configuration*. 
 
 1. Tenez compte des façons suivantes d’améliorer les réponses d’un assistant IA générative :
     - Commencez par fixer un objectif spécifique pour l’assistant
@@ -105,3 +95,11 @@ Commençons par créer un projet Azure AI Foundry.
 1. Passez en revue la réponse, qui doit fournir une liste numérotée de sites à voir à Paris.
 
 1. Lorsque vous avez terminé, vous pouvez fermer la fenêtre du navigateur.
+
+## Nettoyage
+
+Si vous n’avez pas l’intention d’effectuer plus d’exercices, supprimez les ressources dont vous n’avez plus besoin. Cela évite d’accumuler des coûts inutiles.
+
+1. Ouvrez le **portail Azure** à l’adresse [https://portal.azure.com](https://portal.azure.com) et sélectionnez le groupe de ressources qui contient les ressources que vous avez créées.
+
+1. Sélectionnez les ressources, puis **Supprimer**, et **Oui** pour confirmer. Les ressources sont alors supprimées.
