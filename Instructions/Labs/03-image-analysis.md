@@ -11,20 +11,15 @@ Supposons que la société de vente au détail fictive *Les Commerçants du Vent
 
 ## Créer un projet dans le portail Azure AI Foundry
 
-Commençons par créer un projet Azure AI Foundry.
+1. Dans un navigateur web, ouvrez le [portail Azure AI Foundry](https://ai.azure.com) à l’adresse `https://ai.azure.com` et connectez-vous en utilisant vos informations d’identification Azure. Fermez les conseils ou les volets de démarrage rapide ouverts lors de votre première connexion. 
 
-1. Dans un navigateur web, ouvrez le [portail Azure AI Foundry](https://ai.azure.com) à l’adresse `https://ai.azure.com` et connectez-vous en utilisant vos informations d’identification Azure. Fermez les conseils ou les volets de démarrage rapide ouverts la première fois que vous vous connectez et, si nécessaire, utilisez le logo **Azure AI Foundry** en haut à gauche pour accéder à la page d’accueil, qui ressemble à l’image suivante (fermez le volet **Aide** s’il est ouvert) :
+1. Dans le navigateur, accédez à `https://ai.azure.com/managementCenter/allResources` et sélectionnez **Créer**. Choisissez ensuite l’option permettant de créer une *ressource de hub AI*.
 
-    ![Capture d’écran de la page d’accueil d’Azure AI Foundry avec l’option de création d’un assistant sélectionné.](./media/azure-ai-foundry-home-page.png)
+1. Dans l’assistant *Créer un projet*, saisissez un nom valide et, si un hub existant est suggéré, choisissez l’option permettant d’en *créer un*. 
 
-1. Sur la page d’accueil, sélectionnez **+Créer un assistant**.
-
-1. Dans l’Assistant **Création d’un assistant**, entrez un nom valide pour votre assistant. 
-
-1. Sélectionnez **Options avancées** et définissez les paramètres suivants :
-    - **Ressource Azure AI Foundry** : *conservez le nom par défaut*
-    - **Abonnement** : *votre abonnement Azure*
-    - **Groupe de ressources** : *créez ou sélectionnez un groupe de ressources*
+1. Développez les *options avancées* pour définir les paramètres suivants de votre projet :
+    - **Abonnement** : votre abonnement Azure.
+    - **Groupe de ressources** : créez ou sélectionnez un groupe de ressources.
     - **Région** : sélectionnez l’un des emplacements suivants.
         * USA Est
         * France Centre
@@ -32,17 +27,13 @@ Commençons par créer un projet Azure AI Foundry.
         * Europe Ouest
         * USA Ouest
 
-1. Vérifiez vos configurations, puis sélectionnez **Créer**. Attendez que le processus de configuration se termine.
+    Attendez que votre projet et votre hub soient créés.
 
-    >**Remarque** : si vous recevez une erreur d’autorisation, sélectionnez le bouton **Corriger** pour ajouter les autorisations appropriées pour continuer.
-
-1. Une fois votre projet créé, vous serez amené par défaut vers le terrain de jeu des assistants dans le portail Azure AI Foundry, qui devrait ressembler à l’image suivante :
-
-    ![Capture d’écran des détails d’un projet Azure AI dans le portail Azure AI Foundry.](./media/ai-foundry-project-2.png)
- 
-1. Dans une nouvelle fenêtre de navigateur, ouvrez la [page d’exploration des services Azure AI](https://ai.azure.com/explore/aiservices).
+1. Lorsque le projet est créé, vous accédez à une page *Vue d’ensemble* des détails du projet. Sélectionnez **Services d’IA** dans le menu de gauche (vous devrez peut-être développer le menu en cliquant sur l’icône supérieure pour lire son contenu). 
 
 1. Dans la page *Services d’IA*, sélectionnez la vignette *Vision + Document* pour essayer les fonctionnalités Azure AI Vision et Document.
+
+    ![Capture d’écran de la vignette Vision + Document dans Azure AI Foundry.](./media/vision-document-tile.png)
 
 ## Générer des légendes pour une image
 
@@ -51,6 +42,8 @@ Utilisons la fonctionnalité de sous-titrage d’image d’Azure AI Vision pou
 1. Dans la page *Vision + Document*, faites défiler vers le bas et sélectionnez **Image** dans *Afficher toutes les autres fonctionnalités de vision*. Sélectionnez ensuite la vignette de **Sous-titrage d’image**.
 
     ![Capture d’écran de la vignette de sous-titres d’image dans la section Image de la page Vision et Document.](./media/vision-image-captioning-tile.png)
+
+1. Dans la page **Ajouter des sous-titres à des images**, sélectionnez la ressource *Azure AI Services* que vous avez créée. 
 
 1. Dans la page **Ajouter des sous-titres à des images**, passez en revue la ressource à laquelle vous êtes connecté, qui est répertoriée dans le sous-titre **Essayer**. Vous ne devez pas avoir à apporter de modifications. (*Remarque* : si vous n’avez pas personnalisé un emplacement de ressource valide précédemment lors de la création de la ressource, vous devrez peut-être créer une ressource Azure AI Services qui se trouve dans une région valide. Vous devez créer la nouvelle ressource pour continuer avec le labo.)  
 
