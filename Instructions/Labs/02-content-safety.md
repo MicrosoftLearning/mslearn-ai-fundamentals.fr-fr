@@ -51,7 +51,7 @@ Commençons par créer un projet Azure AI Foundry.
 
     ![Capture d’écran de la démonstration de détection de visages dans le portail Azure AI Foundry.](./media/detect-faces-demo.png)
 
-1. Faites défiler vers le bas jusqu’à la section **Exécuter le code**. Sélectionnez **Afficher le code**. Faites défiler jusqu’à la section commençant par *import os*. Dans l’exemple de code fourni, vous verrez des espaces réservés où insérer la clé et le point de terminaison.
+1. Faites défiler vers le bas jusqu’à la section **Exécuter le code**. Sélectionnez **Afficher le code**. Faites défiler jusqu’à la section qui commence par *import os*. Dans l’exemple de code fourni, vous verrez des espaces réservés où insérer la clé et le point de terminaison.
 
     ![Capture d’écran de l’écran Afficher le code affichant les espaces réservés pour la clé et le point de terminaison.](./media/view-code-example.png) 
 
