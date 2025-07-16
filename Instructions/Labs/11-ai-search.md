@@ -177,8 +177,6 @@ Une fois les documents dans le stockage, vous pouvez utiliser Recherche Azure AI
 
 1. Laissez la **Planification** définie sur **Une fois**.
 
-1. Développez les **Options avancées**. Assurez-vous que l’option **Encoder les clés en Base-64** est sélectionnée, car l’encodage de clés peut rendre l’index plus efficace.
-
 1. Sélectionnez **Envoyer** pour créer la source de données, les compétences, l’index et l’indexeur. L’indexeur est exécuté automatiquement et exécute le pipeline d’indexation, qui :
     - Extrait les champs de métadonnées des documents et le contenu de la source de données.
     - Exécute l’ensemble de compétences de compétences cognitives pour générer des champs enrichis supplémentaires.

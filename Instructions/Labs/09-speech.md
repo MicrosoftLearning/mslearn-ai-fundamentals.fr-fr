@@ -11,37 +11,29 @@ Dans cet exercice, vous allez utiliser Azure AI Speech dans le portail Azure 
 
 ## Créer un projet dans le portail Azure AI Foundry
 
-1. Dans un onglet de navigateur, accédez à [Azure AI Foundry](https://ai.azure.com?azure-portal=true).
+1. Dans un navigateur web, ouvrez le [portail Azure AI Foundry](https://ai.azure.com) à l’adresse `https://ai.azure.com` et connectez-vous en utilisant vos informations d’identification Azure. Fermez les conseils ou les volets de démarrage rapide ouverts lors de votre première connexion. 
 
-1. Connectez-vous avec votre compte. 
+1. Dans le navigateur, accédez à `https://ai.azure.com/managementCenter/allResources` et sélectionnez **Créer**. Choisissez ensuite l’option permettant de créer une *ressource Azure AI Foundry*.
 
-1. Sur la page d’accueil du portail Azure AI Foundry, sélectionnez **Créer un projet**. Dans Azure AI Foundry, les projets sont des conteneurs qui aident à organiser votre travail.  
+1. Dans l’Assistant *Créer un projet*, entrez un nom valide pour votre projet.
 
-    ![Capture d’écran de la page d’accueil d’Azure AI Foundry avec l’option de création d’un projet sélectionné.](./media/azure-ai-foundry-home-page.png)
+1. Développez les *options avancées* pour définir les paramètres suivants de votre projet :
+    - **Abonnement** : votre abonnement Azure.
+    - **Groupe de ressources** : créez ou sélectionnez un groupe de ressources.
+    - **Région** : sélectionnez l’un des emplacements suivants.
+        * USA Est
+        * France Centre
+        * Centre de la Corée
+        * Europe Ouest
+        * USA Ouest
 
-1. Dans le volet *Créer un projet*, vous verrez un nom de projet généré, que vous pouvez conserver en l’état. Selon que vous avez créé un hub par le passé, vous verrez une liste de *nouvelles* ressources Azure à créer ou une liste déroulante de hubs existants. Si vous voyez la liste déroulante des hubs existants, sélectionnez *Créer un hub*, créez un nom unique pour votre hub, puis sélectionnez *Suivant*.  
+    Attendez que votre projet et votre hub soient créés.
+
+1. Lorsque le projet est créé, vous accédez à une page *Vue d’ensemble* des détails du projet.
  
-    ![Capture d’écran du volet Créer un projet avec des noms générés automatiquement pour le hub et le projet.](./media/azure-ai-foundry-create-project.png)
+1. Dans le menu de gauche de l’écran, sélectionnez **Terrains de jeu**.
 
-> **Important** : vous aurez besoin d’une ressource de services Azure AI configurée dans un emplacement spécifique pour effectuer le reste du labo.
-
-1. Dans le même volet *Créer un projet*, sélectionnez **Personnaliser** et sélectionnez l’un des **emplacements** suivants : USA Est, France Centre, Corée Centre, Europe Ouest ou USA Ouest pour terminer le reste du labo. Sélectionnez ensuite **Créer**. 
-
-1. Notez les ressources créées : 
-- Azure AI services
-- Azure AI Hub
-- Projet Azure AI
-- Compte de stockage
-- Key vault
-- Resource group  
- 
-1. Une fois les ressources créées, vous serez redirigé vers la page *Vue d’ensemble* de votre projet. Dans le menu de gauche de l’écran, sélectionnez **Services d’IA**.
- 
-    ![Capture d’écran du menu de gauche de l’écran du projet avec Services d’IA sélectionnés.](./media/azure-ai-foundry-ai-services.png)  
-
-1. Dans la page *Services d’IA*, sélectionnez la vignette *Speech* pour essayer les fonctionnalités d’Azure AI Speech.
-
-    ![Capture d’écran de la vignette Speech sélectionnée dans la page Services d’IA.](./media/speech-tile.png)
+1. Dans la page *Terrains de jeu*, sélectionnez la vignette **Terrain de jeu Speech** pour essayer certaines fonctionnalités Azure AI Speech.
 
 ## Explorer la reconnaissance vocale dans le terrain de jeu Speech d’Azure AI Foundry
 
