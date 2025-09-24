@@ -31,7 +31,7 @@ Pour utiliser Azure Machine Learning, vous devez approvisionner un espace de tra
 
 #### Lancer Studio 
 
-1. Dans la ressource de votre espace de travail Azure Machine Learning, sélectionnez **Lancer Studio** (ou ouvrez un nouvel onglet de navigateur et accédez à [https://ml.azure.com](https://ml.azure.com?azure-portal=true), puis connectez-vous à Azure Machine Learning Studio à l’aide de votre compte Microsoft). Fermez tous les messages affichés.
+1. Dans la ressource de votre espace de travail Azure Machine Learning, sélectionnez **Lancer Studio** (ou ouvrez un nouvel onglet de navigateur et accédez à [https://ml.azure.com](https://ml.azure.com), puis connectez-vous à Azure Machine Learning Studio à l’aide de votre compte Microsoft). Fermez tous les messages affichés.
 
 1. Dans Azure Machine Learning Studio, vous devez voir l’espace de travail qui vient d’être créé. Si ce n’est pas le cas, sélectionnez **Tous les espaces de travail** dans le menu de gauche, puis l’espace de travail créé.
 
@@ -49,26 +49,27 @@ Le Machine Learning automatisé vous permet d’essayer plusieurs algorithmes et
 
     - **Nom du travail** : le champ Nom du travail doit déjà être prérempli avec un nom unique. Gardez-le tel quel.
     - **Nom de la nouvelle expérience** : `mslearn-bike-rental`
-    - **Description** : Machine Learning automatisé pour la prédiction des locations de vélos
+    - **Description** : `Automated machine learning for bike rental prediction`
     - **Balises** : *aucune*
 
    **Type de tâches et données** :
 
     - **Sélectionner le type de tâche** : Régression
-    - **Sélectionner un jeu de données** : créer un jeu de données avec les paramètres suivants :
-        - **Type de données** :
-            - **Nom :** `bike-rentals`
-            - **Description** : `Historic bike rental data`
-            - **Type** : Table (mltable)
-        - **Source des données** :
-            - Sélectionnez **À partir de fichiers locaux**
-        - **Type de stockage de destination** :
-            - **Datastore type** (Type de magasin de données) : Stockage Blob Azure
-            - **Nom** : workspaceblobstore
-        - **Sélection MLTable** :
-            - **Charger le dossier** : *Télécharger et décompresser le dossier qui contient les deux fichiers à charger* `https://aka.ms/bike-rentals`
-
-        Sélectionnez **Créer**. Une fois le jeu de données créé, sélectionnez le jeu de données **bike-rentals** pour continuer à envoyer le travail de ML automatisé.
+    - **Sélectionner des données** :
+        - Créez une ressource de données avec les paramètres suivants :
+            - **Type de données** :
+                - **Nom :** `bike-rentals`
+                - **Description** : `Historic bike rental data`
+                - **Type** : Table (mltable)
+            - **Source des données** :
+                - Sélectionnez **À partir de fichiers locaux**
+            - **Type de stockage de destination** :
+                - **Datastore type** (Type de magasin de données) : Stockage Blob Azure
+                - **Nom** : workspaceblobstore
+            - **Sélection MLTable** :
+                - *Téléchargez et décompressez le [dossier bike-data](https://aka.ms/bike-rentals) à partir de `https://aka.ms/bike-rentals`.*
+                - **Charger le dossier** : *Téléchargez le dossier **bike-data** extrait, qui contient les fichiers de données et de définition de table dont vous avez besoin pour votre jeu de données d’entraînement.*
+        - Sélectionnez la ressource de données **bike-rentals** nouvellement créée et continuez à définir la tâche ML automatisé à la page suivante (**Paramètres de la tâche**).
 
     **Paramètres de la tâche** :
 
@@ -77,8 +78,8 @@ Le Machine Learning automatisé vous permet d’essayer plusieurs algorithmes et
     - **Colonne cible** : rentals (entier)
     - **Paramètres de configuration supplémentaires** :
         - **Métrique principale** : NormalizedRootMeanSquaredError
-        - **Expliquer le meilleur modèle** : *Non sélectionné*
-        - **Activer l’empilement d’ensembles** : *Non sélectionné*
+        - **Expliquer le meilleur modèle** : *<u>Non</u>sélectionné*
+        - **Activer l’empilement d’ensembles** : *<u>Non</u>sélectionné*
         - **Utiliser tous les modèles pris en charge** : <u>Un</u>sélectionné. *Vous allez restreindre le travail pour essayer uniquement quelques algorithmes spécifiques.*
         - **Modèles autorisés** : *Sélectionnez uniquement **RandomForest** et **LightGBM**. Normalement, vous pouvez en essayer autant que possible, mais chaque modèle ajouté augmente le temps nécessaire à l’exécution du travail.*
     - **Limites** : *Développer cette section*
@@ -134,16 +135,16 @@ Une fois le travail de Machine Learning automatisé terminé, vous pouvez évalu
 
     > **Remarque** : si vous recevez un message indiquant qu’il n’y a pas suffisamment de quota pour sélectionner la machine virtuelle *Standard_DS3_v2*, sélectionnez-en une autre.
 
-1. Attendez que le déploiement commence. Cette opération peut prendre quelques secondes. Le **état Déployé** pour le point de terminaison **predict-rentals** est indiqué dans la partie centrale de la page comme *En cours d’exécution*.
+1. Attendez que le déploiement commence. Cette opération peut prendre quelques secondes. Le **statut de déploiement** du point de terminaison sera indiqué dans la partie principale de la page comme *En cours d’exécution*.
 1. Attendez que l’**état du déploiement** passe à *Réussi*. Cette opération peut prendre 5 à 10 minutes.
 
 ## Tester le service déployé
 
 Vous pouvez maintenant tester votre service déployé.
 
-1. Dans le menu de gauche d’Azure Machine Learning studio, sélectionnez **Points de terminaison** et ouvrez le point de terminaison **predict-rentals** en temps réel.
+1. Dans Azure Machine Learning studio, dans le menu de gauche, sélectionnez **Points de terminaison** et ouvrez le point de terminaison en temps réel que vous avez créé.
 
-1. Dans la page du point de terminaison en temps réel **predict-rentals**, l’onglet **Test** s’affiche.
+1. Sur la page du point de terminaison en temps réel, affichez l’onglet **Test**.
 
 1. Dans le volet **Entrer des données pour tester le point de terminaison**, remplacez le modèle JSON par les données de l’entrée suivante :
 
@@ -183,17 +184,24 @@ Vous pouvez maintenant tester votre service déployé.
 
     Le volet Tester a récupéré les données d’entrée et a utilisé le modèle sur lequel vous avez effectué l'apprentissage pour retourner le nombre prévu de locations.
 
-Passons en revue les opérations que vous avez effectuées. Vous avez utilisé un jeu de données de données historiques sur la location de bicyclettes pour effectuer l’apprentissage d’un modèle. Le modèle prédit le nombre de locations de bicyclettes attendues pour un jour donné, en fonction des *caractéristiques* saisonnières et météorologiques.
+## Afficher le code pour utiliser le service
+
+Maintenant que vous disposez d’un point de terminaison de service prédictif, les développeurs peuvent générer des applications qui le consomment.
+
+1. Sur la page du point de terminaison en temps réel, affichez l’onglet **Consommer**.
+1. Passez en revue l’exemple de code permettant de consommer votre point de terminaison, qui est fourni pour plusieurs langages de programmation.
+
+Passons en revue les opérations que vous avez effectuées. Vous avez utilisé un jeu de données de données historiques sur la location de bicyclettes pour effectuer l’apprentissage d’un modèle. Le modèle prédit le nombre de locations de bicyclettes attendues pour un jour donné, en fonction des *caractéristiques* saisonnières et météorologiques. Enfin, vous avez testé le modèle et passé en revue le code qu’un développeur peut utiliser pour générer une application permettant de le consommer.
 
 ## Nettoyage
 
 Le service web que vous avez créé est hébergé dans une *instance de conteneur Azure*. Si vous n’envisagez pas d’effectuer d’autres expériences avec celui-ci, vous devez supprimer le point de terminaison afin d’éviter une utilisation d’Azure non nécessaire.
 
-1. Dans [Azure Machine Learning Studio](https://ml.azure.com?azure-portal=true), sous l’onglet **Points de terminaison**, sélectionnez le point de terminaison **prédiction-locations**. Sélectionnez ensuite **Supprimer**, puis confirmez la suppression du point de terminaison.
+1. Dans [Azure Machine Learning studio](https://ml.azure.com), sous l’onglet **Points de terminaison**, sélectionnez le point de terminaison que vous avez déployé. Sélectionnez ensuite **Supprimer**, puis confirmez la suppression du point de terminaison.
 
     La suppression du calcul évite une facturation à votre abonnement des ressources de calcul. Une petite quantité de stockage de données vous est cependant facturée tant que l’espace de travail Azure Machine Learning existe dans votre abonnement. Si vous avez terminé l’exploration d’Azure Machine Learning, vous pouvez supprimer l’espace de travail Azure Machine Learning et les ressources associées.
 
 Pour supprimer votre espace de travail, procédez comme suit :
 
-1. Dans le [portail Azure](https://portal.azure.com?azure-portal=true), dans la page **Groupes de ressources**, ouvrez le groupe de ressources que vous avez spécifié lors de la création de votre espace de travail Azure Machine Learning.
+1. Dans le [portail Azure](https://portal.azure.com), dans la page **Groupes de ressources**, ouvrez le groupe de ressources que vous avez spécifié lors de la création de votre espace de travail Azure Machine Learning.
 2. Cliquez sur **Supprimer le groupe de ressources**, tapez le nom du groupe de ressources pour confirmer que vous souhaitez le supprimer, puis sélectionnez **Supprimer**.
