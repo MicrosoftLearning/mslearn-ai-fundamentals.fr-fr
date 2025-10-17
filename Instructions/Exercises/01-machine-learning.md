@@ -54,7 +54,7 @@ Le Machine Learning automatisé vous permet d’essayer plusieurs algorithmes et
 
    **Type de tâches et données** :
     
-    >**REMARQUE** : Certains abonnements disposent d’autorisations qui ne permettent pas l’ajout de *bike-data* à *workspaceblobstore*. Si vous rencontrez ce problème, vous devez actuellement passer à un abonnement personnel ou ajuster les autorisations de votre abonnement. 
+    >**REMARQUE** : Certains abonnements disposent d’autorisations qui ne permettent pas l’ajout de *bike-data* à *workspaceblobstore*. Si vous rencontrez ce problème, vous devez basculer vers un autre abonnement.
 
     - **Sélectionner le type de tâche** : Régression
     - **Sélectionner des données** :
