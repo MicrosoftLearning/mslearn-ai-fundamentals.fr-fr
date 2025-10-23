@@ -53,6 +53,8 @@ Le Machine Learning automatisé vous permet d’essayer plusieurs algorithmes et
     - **Balises** : *aucune*
 
    **Type de tâches et données** :
+    
+    >**REMARQUE** : Certains abonnements disposent d’autorisations qui ne permettent pas l’ajout de *bike-data* à *workspaceblobstore*. Si vous rencontrez ce problème, vous devez basculer vers un autre abonnement.
 
     - **Sélectionner le type de tâche** : Régression
     - **Sélectionner des données** :
@@ -69,6 +71,7 @@ Le Machine Learning automatisé vous permet d’essayer plusieurs algorithmes et
             - **Sélection MLTable** :
                 - *Téléchargez et décompressez le [dossier bike-data](https://aka.ms/bike-rentals) à partir de `https://aka.ms/bike-rentals`.*
                 - **Charger le dossier** : *Téléchargez le dossier **bike-data** extrait, qui contient les fichiers de données et de définition de table dont vous avez besoin pour votre jeu de données d’entraînement.*
+                - **Remarque** : *si un message vous invite à ignorer la validation des données pour continuer, sélectionnez l’option permettant d’ignorer la validation des données.*
         - Sélectionnez la ressource de données **bike-rentals** nouvellement créée et continuez à définir la tâche ML automatisé à la page suivante (**Paramètres de la tâche**).
 
     **Paramètres de la tâche** :
